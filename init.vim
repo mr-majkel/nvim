@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'jalvesaq/Nvim-R'
+Plug 'jiangmiao/auto-pairs'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " RRRRRR alternative to coc for R
 Plug 'ncm2/ncm2'
@@ -53,8 +54,12 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+ 
 " nvim-R options
-let R_path = "~/Documents/R/R-3.6.2/bin/x64"
+let R_path = "~/Documents/R/R-4.0.1/bin/x64"
 hi rGlobEnvFun ctermfg=117 guifg=#87d7ff cterm=italic gui=italic
 let R_hi_fun_globenv = 2
 
