@@ -12,6 +12,7 @@ set cmdheight=2
 set shiftwidth=2 softtabstop=2 expandtab
 set mouse=a 
 behave mswin
+set cc=80
 
 source $VIMRUNTIME/mswin.vim
 :cd ~
@@ -42,6 +43,15 @@ Plug 'ncm2/ncm2-path'
 
 " RRRRRRRRR
 call plug#end()
+" ncm2-ultisnips 
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+" c-j c-k for moving in snippet
+" let g:UltiSnipsExpandTrigger		= '<c-j>'
+let g:UltiSnipsJumpForwardTrigger	= '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger	= '<c-k>'
+let g:UltiSnipsRemoveSelectModeMappings = 0
+" `my_snippets` is the directory we created before
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 
 colorscheme gruvbox
 
