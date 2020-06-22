@@ -23,6 +23,7 @@ source $VIMRUNTIME/mswin.vim
 :cd ~
 
 call plug#begin('~/AppData/Local/nvim/plugged')
+Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
