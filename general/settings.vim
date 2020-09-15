@@ -1,4 +1,6 @@
 let g:mapleader = "<Space>"
+"let &shell='C:/Users/modzmi01/Documents/PowerShell-7.0.3-win-x64/pwsh.exe'
+
 
 set completeopt=noinsert,menuone,noselect
 set nu                                        " line numbers

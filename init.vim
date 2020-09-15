@@ -1,12 +1,15 @@
 source ~/AppData/Local/nvim/general/settings.vim
 source ~/AppData/Local/nvim/vim-plug/plugins.vim
 " source ~/AppData/Local/nvim/plug-config/coc.vim
-source ~/AppData/Local/nvim/plug-config/nvim-R.vim
+" source ~/AppData/Local/nvim/plug-config/nvim-R.vim
+source ~/AppData/Local/nvim/plug-config/nvim-lsp.vim
+source ~/AppData/Local/nvim/plug-config/vim-slime.vim
+source ~/AppData/Local/nvim/plug-config/firenvim.vim
 source ~/AppData/Local/nvim/plug-config/airline.vim
 source ~/AppData/Local/nvim/plug-config/ultisnips.vim
 " source ~/AppData/Local/nvim/plug-config/ncm2.vim
 source ~/AppData/Local/nvim/general/my-keys.vim
-source ~/AppData/Local/nvim/plug-config/deoplete.vim
+" source ~/AppData/Local/nvim/plug-config/deoplete.vim
 set termguicolors
 colorscheme gruvbox
 set background=dark
