@@ -1,15 +1,15 @@
-source ~/AppData/Local/nvim/general/settings.vim
-source ~/AppData/Local/nvim/vim-plug/plugins.vim
-" source ~/AppData/Local/nvim/plug-config/coc.vim
-" source ~/AppData/Local/nvim/plug-config/nvim-R.vim
-source ~/AppData/Local/nvim/plug-config/nvim-lsp.vim
-source ~/AppData/Local/nvim/plug-config/vim-slime.vim
-source ~/AppData/Local/nvim/plug-config/firenvim.vim
-source ~/AppData/Local/nvim/plug-config/airline.vim
-source ~/AppData/Local/nvim/plug-config/ultisnips.vim
-" source ~/AppData/Local/nvim/plug-config/ncm2.vim
-source ~/AppData/Local/nvim/general/my-keys.vim
-" source ~/AppData/Local/nvim/plug-config/deoplete.vim
+source $XDG_CONFIG_HOME/nvim/general/settings.vim
+source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/coc.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/nvim-R.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/nvim-lsp.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/vim-slime.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/firenvim.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/airline.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/ultisnips.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/ncm2.vim
+source $XDG_CONFIG_HOME/nvim/general/my-keys.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/deoplete.vim
 set termguicolors
 colorscheme gruvbox
 set background=dark
