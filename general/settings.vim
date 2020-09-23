@@ -11,6 +11,7 @@ set hlsearch
 set nowrap
 set sidescroll=10
 set incsearch
+set inccommand=nosplit                       " shows live changes for substitute
 set cmdheight=2
 set shiftwidth=2 softtabstop=2 expandtab     " tab = 2 spaces always
 set mouse=a                                  " Enable your mouse 
