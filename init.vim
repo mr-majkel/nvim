@@ -22,7 +22,7 @@ set background=dark
 " nerdtree options
 " autocmd vimenter * NERDTree
 nnoremap <C-n> :NERDTreeToggle<CR>
-
+nnoremap <Leader>n :NERDTreeToggle<CR>:OpenBookmark 
 
 
 " Use <TAB> to select the popup menu:
