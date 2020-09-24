@@ -1,4 +1,5 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
+Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
 Plug 'morhetz/gruvbox'

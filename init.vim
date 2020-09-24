@@ -2,6 +2,7 @@ source $XDG_CONFIG_HOME/nvim/general/settings.vim
 source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
 " source $XDG_CONFIG_HOME/nvim/plug-config/coc.vim
 " source $XDG_CONFIG_HOME/nvim/plug-config/nvim-R.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/nvim-lsp.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/vim-slime.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/firenvim.vim
