@@ -1,6 +1,10 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
