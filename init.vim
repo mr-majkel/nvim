@@ -10,6 +10,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/airline.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/ultisnips.vim
 " source $XDG_CONFIG_HOME/nvim/plug-config/ncm2.vim
 source $XDG_CONFIG_HOME/nvim/general/my-keys.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/whichkey.vim
 " source $XDG_CONFIG_HOME/nvim/plug-config/deoplete.vim
 set termguicolors
 colorscheme gruvbox

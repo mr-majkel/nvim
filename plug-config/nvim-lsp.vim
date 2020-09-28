@@ -37,8 +37,10 @@
 lua << EOF
   local on_attach_vim = function()
     require'diagnostic'.on_attach()
+    require'completion'.on_attach()
   end
-  require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
+  require'nvim_lsp'.jedi_language_server.setup{on_attach=on_attach_vim}
+  -- require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
   require'nvim_lsp'.r_language_server.setup{on_attach=on_attach_vim}
 EOF
 
@@ -51,3 +53,19 @@ set completeopt=menuone,noinsert,noselect
 "
 " " Avoid showing message extra message when using completion
 set shortmess+=c
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+
+" let g:completion_chain_complete_list.default.comment.default = [      
+"       \ { complete_items : [ 'lsp' , 'snippet'] },
+"       \ { complete_items : [ 'buffers' ] },
+"       \ { mode : [ '<c-p>' ] },
+"       \ { mode : [ '<c-n>' ] },
+"       \ ]    
