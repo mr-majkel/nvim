@@ -16,6 +16,7 @@ Plug 'sirver/UltiSnips'
 Plug 'neovim/nvim-lsp'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'
+Plug 'steelsojka/completion-buffers'
 Plug 'jpalardy/vim-slime'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " RRRRRRRRR

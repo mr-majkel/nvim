@@ -38,7 +38,8 @@ lua << EOF
   local on_attach_vim = function()
     require'diagnostic'.on_attach()
   end
-  require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
+  require'nvim_lsp'.jedi_language_server.setup{on_attach=on_attach_vim}
+  -- require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
   require'nvim_lsp'.r_language_server.setup{on_attach=on_attach_vim}
   require'nvim_lsp'.vimls.setup{on_attach=on_attach_vim}
 EOF
@@ -63,3 +64,10 @@ nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+
+" let g:completion_chain_complete_list.default.comment.default = [      
+"       \ { complete_items : [ 'lsp' , 'snippet'] },
+"       \ { complete_items : [ 'buffers' ] },
+"       \ { mode : [ '<c-p>' ] },
+"       \ { mode : [ '<c-n>' ] },
+"       \ ]    

@@ -13,13 +13,10 @@ source $XDG_CONFIG_HOME/nvim/plug-config/firenvim.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/airline.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/ultisnips.vim
 source $XDG_CONFIG_HOME/nvim/general/my-keys.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/whichkey.vim
 
  
 
-" nerdtree options
-" autocmd vimenter * NERDTree
-" nnoremap <C-n> :NERDTreeToggle<CR>
-" nnoremap <Leader>n :NERDTreeToggle<CR>:OpenBookmark 
 
 
 " Use <TAB> to select the popup menu:
