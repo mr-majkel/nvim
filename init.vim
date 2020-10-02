@@ -15,14 +15,3 @@ source $XDG_CONFIG_HOME/nvim/plug-config/ultisnips.vim
 source $XDG_CONFIG_HOME/nvim/general/my-keys.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/whichkey.vim
 
- 
-
-
-
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Map Esc to exit terminal mode
-tnoremap <Esc> <C-\><C-n>
-
