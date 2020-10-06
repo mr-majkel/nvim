@@ -5,6 +5,7 @@ set splitright " split to the right
 set completeopt=noinsert,menuone,noselect
 set nu                                        " line numbers
 set rnu                                       " relative numbers to the curr line
+set signcolumn=yes                            " always show sign column (used for lsp)
 set autoindent                                " autoindenting on
 set smartindent                               " smartindenting when pasting
 set hlsearch

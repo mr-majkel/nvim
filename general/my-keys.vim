@@ -34,3 +34,14 @@ endfunction
 
 " Open default editor for file browsing
 nnoremap <Leader>nn :call NetrwToggle()<CR>
+
+" Switch buffers
+nnoremap <leader>gj :bprevious<cr>
+nnoremap <leader>gk :bnext<cr>
+
+" Switch windows
+nnoremap <leader>h :wincmd h<cr>
+nnoremap <leader>j :wincmd j<cr>
+nnoremap <leader>k :wincmd k<cr>
+nnoremap <leader>l :wincmd l<cr>
+nnoremap <leader>p :wincmd p<cr>
