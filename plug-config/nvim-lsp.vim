@@ -41,6 +41,8 @@ lua << EOF
   require'nvim_lsp'.jedi_language_server.setup{on_attach=on_attach_vim}
   -- require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
   require'nvim_lsp'.r_language_server.setup{on_attach=on_attach_vim}
+  require'nvim_lsp'.tsserver.setup{on_attach=on_attach_vim}
+  require'nvim_lsp'.vuels.setup{on_attach=on_attach_vim}
   require'nvim_lsp'.vimls.setup{on_attach=on_attach_vim}
 EOF
 
