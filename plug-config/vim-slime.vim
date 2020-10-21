@@ -8,6 +8,7 @@ function! SlimeTermV() abort
   vsplit
   enew
   terminal
+  let l:cur_dir = "cd " . getcwd()
   let l:repl_job_id = b:terminal_job_id
   " Go to previous split.
   execute 'normal!' . "\<c-w>p"

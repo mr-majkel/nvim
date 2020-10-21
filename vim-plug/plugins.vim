@@ -13,11 +13,13 @@ Plug 'vim-airline/vim-airline'
 " Plug 'jalvesaq/Nvim-R', { 'branch': 'master' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'sirver/UltiSnips'
-Plug 'neovim/nvim-lsp'
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'
 Plug 'steelsojka/completion-buffers'
 Plug 'jpalardy/vim-slime'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'preservim/tagbar'
 " RRRRRRRRR
 call plug#end()
