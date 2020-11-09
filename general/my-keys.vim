@@ -38,6 +38,7 @@ nnoremap <Leader>nn :call NetrwToggle()<CR>
 " Switch buffers
 nnoremap <leader>gj :bprevious<cr>
 nnoremap <leader>gk :bnext<cr>
+nnoremap <leader>gq :bdelete<cr>
 
 " Switch windows
 nnoremap <leader>h :wincmd h<cr>

@@ -1,7 +1,9 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
+Plug 'romgrk/lib.kom'
+Plug 'romgrk/barbar.nvim'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
