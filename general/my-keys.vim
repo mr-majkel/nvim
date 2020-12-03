@@ -46,3 +46,15 @@ nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>p :wincmd p<cr>
+
+" List terminal job id
+nnoremap <silent> <leader>tt :call Termbinds()<CR>
+
+function Termbinds() abort
+  if &buftype ==# 'terminal'
+    echo 'The job id is'
+    echo b:terminal_job_id
+  else
+    echo b:slime_config
+  endif
+endfunction
