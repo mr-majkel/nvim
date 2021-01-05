@@ -23,6 +23,7 @@ Plug 'nvim-lua/diagnostic-nvim'
 Plug 'steelsojka/completion-buffers'
 Plug 'jpalardy/vim-slime'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'raghur/vim-ghost', {'do': 'GhostInstall'}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar'
 " RRRRRRRRR
