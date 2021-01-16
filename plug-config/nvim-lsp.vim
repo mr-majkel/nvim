@@ -1,14 +1,14 @@
 lua << EOF
   local on_attach_vim = function()
-    require'diagnostic'.on_attach()
+    -- require'diagnostic'.on_attach()
   end
-  require'nvim_lsp'.jedi_language_server.setup{on_attach=on_attach_vim}
-  -- require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
-  -- require'nvim_lsp'.pyright.setup{on_attach=on_attach_vim}
-  require'nvim_lsp'.r_language_server.setup{on_attach=on_attach_vim}
-  require'nvim_lsp'.tsserver.setup{on_attach=on_attach_vim}
-  require'nvim_lsp'.vuels.setup{on_attach=on_attach_vim}
-  require'nvim_lsp'.vimls.setup{on_attach=on_attach_vim}
+  -- require'lspconfig'.jedi_language_server.setup{on_attach=on_attach_vim}
+  -- require'lspconfig'.pyls.setup{on_attach=on_attach_vim}
+  require'lspconfig'.pyright.setup{on_attach=on_attach_vim}
+  require'lspconfig'.r_language_server.setup{on_attach=on_attach_vim}
+  require'lspconfig'.tsserver.setup{on_attach=on_attach_vim}
+  require'lspconfig'.vuels.setup{on_attach=on_attach_vim}
+  require'lspconfig'.vimls.setup{on_attach=on_attach_vim}
 EOF
 
 augroup completion_lua
