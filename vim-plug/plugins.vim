@@ -17,8 +17,8 @@ Plug 'romgrk/barbar.nvim'
 " Plug 'jalvesaq/Nvim-R', { 'branch': 'master' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'sirver/UltiSnips'
-Plug 'neovim/nvim-lspconfig', {'commit': 'c7ad455b85ec95bf00273763b0e350852707631a'}
-Plug 'nvim-lua/completion-nvim', {'commit': 'efd055c41a860637d18112781acca676433ab3b6'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'
 Plug 'steelsojka/completion-buffers'
 Plug 'jpalardy/vim-slime'
