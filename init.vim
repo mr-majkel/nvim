@@ -1,6 +1,7 @@
 source $XDG_CONFIG_HOME/nvim/general/settings.vim
 source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
 " source $XDG_CONFIG_HOME/nvim/plug-config/nvim-R.vim
+let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 set termguicolors
 set background=dark
