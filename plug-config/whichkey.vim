@@ -14,6 +14,11 @@ let g:which_key_map.n = {
 let g:which_key_map.e = {
       \ 'name'     : 'Git actions',
       \ 'e' : 'Open fugitve Git',
+      \ 'p' : 'Git pull',
+      \ 'f' : 'Git fetch',
+      \ 'h' : 'Git push',
+      \ 'c' : 'Git checkout',
+      \ 'm' : 'Git commit with no-verify',
       \}
 let g:which_key_map.g = {
       \ 'name' : 'Buffer actions',
