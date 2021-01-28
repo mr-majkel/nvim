@@ -11,6 +11,10 @@ let g:which_key_map.s = {
 let g:which_key_map.n = {
       \ 'name'     : 'Open bookmark',
       \}
+let g:which_key_map.e = {
+      \ 'name'     : 'Git actions',
+      \ 'e' : 'Open fugitve Git',
+      \}
 let g:which_key_map.g = {
       \ 'name' : 'Buffer actions',
       \ 'g' : 'Buf selection',
