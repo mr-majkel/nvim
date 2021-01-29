@@ -58,3 +58,6 @@ function Termbinds() abort
     echo b:slime_config
   endif
 endfunction
+
+" mute Q
+nnoremap Q :q
