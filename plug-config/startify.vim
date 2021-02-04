@@ -18,3 +18,5 @@ let g:startify_skiplist = [
   \ escape(fnamemodify(resolve($XDG_CONFIG_HOME), ':p'), '\') . escape('\nvim\plugged\*\doc', '\')
   \ ]
 
+" mappings
+nnoremap S :SClose
