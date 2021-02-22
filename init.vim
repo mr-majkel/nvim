@@ -11,6 +11,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/vifm.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/telescope.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/nvim-lsp.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/vim-dadbot-complete.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/vim-slime.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/firenvim.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/airline.vim
