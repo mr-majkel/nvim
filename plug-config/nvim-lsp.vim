@@ -66,3 +66,16 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
 let g:diagnostic_enable_virtual_text=1
+let g:completion_chain_complete_list = {
+   \   'default' : {
+   \     'default': [
+   \       {'complete_items': ['lsp', 'snippet']},
+   \       {'mode': '<c-p>'},
+   \       {'mode': '<c-n>'}],
+   \     'comment': [
+   \       {'complete_items': ['buffers']}],
+   \     'string': [
+   \       {'complete_items': ['path']}],
+   \   }
+   \ }
+

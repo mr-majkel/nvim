@@ -4,6 +4,12 @@ inoremap <c-Space> <c-x><c-o>
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+" ins-complete file
+inoremap <C-f> <c-x><c-f>
+
+" change windows backslashes
+nnoremap <leader>/ V:s/\\/\//g<cr>
+vnoremap <leader>/ :s/\\/\//g<cr>
 " Map Esc to exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
@@ -39,6 +45,8 @@ nnoremap <Leader>nn :call NetrwToggle()<CR>
 nnoremap <leader>gj :bprevious<cr>
 nnoremap <leader>gk :bnext<cr>
 nnoremap <leader>gq :bdelete<cr>
+" close all other buffers
+nnoremap <leader>gQ :%bd\|e#<cr>
 
 " Switch windows
 nnoremap <leader>h :wincmd h<cr>
@@ -61,3 +69,4 @@ endfunction
 
 " mute Q
 nnoremap Q :q
+
