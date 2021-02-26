@@ -30,4 +30,5 @@ Plug 'preservim/tagbar'
 Plug 'kristijanhusak/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
+Plug 'vimwiki/vimwiki'
 call plug#end()
