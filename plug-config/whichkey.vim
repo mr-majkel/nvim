@@ -32,5 +32,7 @@ let g:which_key_map.h = 'Go to win on the left'
 let g:which_key_map.j = 'Go to win below'
 let g:which_key_map.k = 'Go to win above'
 let g:which_key_map.l = 'Go to win on the right'
-let g:which_key_map.p = 'Go to prev window'
+
+let g:which_key_map.p = 'forward paste from clipboard'
+let g:which_key_map.P = 'backward paste from clipboard'
 call which_key#register('<Space>', "g:which_key_map")
