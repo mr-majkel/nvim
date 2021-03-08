@@ -18,6 +18,7 @@ set shiftwidth=2 softtabstop=2 expandtab     " tab = 2 spaces always
 set mouse=a                                  " Enable your mouse 
 " behave mswin
 set colorcolumn=80                           " color column no.80
+set hidden
 
 " source $VIMRUNTIME/mswin.vim                 " make sure windows Ctrl-C/V works
 :cd ~                                        " start at home directory
