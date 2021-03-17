@@ -17,6 +17,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/firenvim.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/airline.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/ultisnips.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/fugitive.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/vimwiki.vim
 source $XDG_CONFIG_HOME/nvim/general/my-keys.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/whichkey.vim
 
