@@ -1,5 +1,5 @@
 let bufferline = {}
-let bufferline.icons = 'numbers'
+let bufferline.icons = v:true
 let bufferline.semantic_letters = v:false
 let bufferline.letters = 'aoeuhtnsidmwvzAOEUIDHTNSFGCRLBMWVQJKXPY'
 
