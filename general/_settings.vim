@@ -10,7 +10,8 @@ set autoindent                                " autoindenting on
 set smartindent                               " smartindenting when pasting
 set hlsearch
 set nowrap
-set sidescroll=10
+set sidescrolloff=10
+set scrolloff=6
 set incsearch
 "set inccommand=split                       " shows live changes for substitute
 set cmdheight=2

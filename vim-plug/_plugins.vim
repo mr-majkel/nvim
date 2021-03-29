@@ -12,7 +12,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'romgrk/nvim-web-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 " Plug 'preservim/nerdtree'
 " Plug 'jalvesaq/Nvim-R', { 'branch': 'master' }
