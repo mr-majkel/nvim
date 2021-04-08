@@ -27,7 +27,7 @@ let g:which_key_map.g = {
       \ 'j' : 'Go to prev buffer',
       \ 'k' : 'Go to next buffer',
       \}
-let g:which_key_map.f = 'Find file in cwd'
+" let g:which_key_map.f = 'Find file in cwd'
 let g:which_key_map.h = 'Go to win on the left'
 let g:which_key_map.j = 'Go to win below'
 let g:which_key_map.k = 'Go to win above'

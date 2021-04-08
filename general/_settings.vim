@@ -22,5 +22,5 @@ set colorcolumn=80                           " color column no.80
 set hidden
 
 " source $VIMRUNTIME/mswin.vim                 " make sure windows Ctrl-C/V works
-:cd ~                                        " start at home directory
+" :cd ~                                        " start at home directory
 
