@@ -1,5 +1,9 @@
 source $XDG_CONFIG_HOME/nvim/general/_settings.vim
-source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
+if !exists("$DOCKER_CONTAINER")
+  source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins_docker.vim
+else
+  source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
+endif
 " source $XDG_CONFIG_HOME/nvim/plug-config/nvim-R.vim
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
@@ -12,9 +16,11 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_telescope.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_vim-dadbot-complete.vim
+if !exists("$DOCKER_CONTAINER")
+  source $XDG_CONFIG_HOME/nvim/plug-config/_firenvim.vim
+  source $XDG_CONFIG_HOME/nvim/plug-config/_vim-dadbot-complete.vim
+endif
 source $XDG_CONFIG_HOME/nvim/plug-config/_vim-slime.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_firenvim.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_airline.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_ultisnips.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_fugitive.vim
