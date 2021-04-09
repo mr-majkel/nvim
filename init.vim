@@ -1,5 +1,5 @@
 source $XDG_CONFIG_HOME/nvim/general/_settings.vim
-if !exists("$DOCKER_CONTAINER")
+if exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins_docker.vim
 else
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
