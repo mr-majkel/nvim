@@ -25,8 +25,8 @@ Plug 'steelsojka/completion-buffers'
 Plug 'jpalardy/vim-slime'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'raghur/vim-ghost', {'do': 'GhostInstall'}
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'preservim/tagbar'
+" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'preservim/tagbar'
 Plug 'kristijanhusak/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
