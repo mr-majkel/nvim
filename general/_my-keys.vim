@@ -10,8 +10,8 @@ inoremap <C-f> <c-x><c-f>
 " change windows backslashes
 nnoremap <leader>/ V:s/\\/\//g<cr>
 vnoremap <leader>/ :s/\\/\//g<cr>
-" Map Esc to exit terminal mode
-tnoremap <Esc> <C-\><C-n>
+" Map keys to exit terminal mode
+tnoremap <C-n><C-n> <C-\><C-n>
 
 " open Netrw window
 function NetrwToggle() abort
