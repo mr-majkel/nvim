@@ -72,3 +72,9 @@ nnoremap Q :q
 " paste from clipboard
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
+" yank to clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+
+" enter command mode
+nnoremap z; :
