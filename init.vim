@@ -21,7 +21,8 @@ if !exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/plug-config/_vim-dadbot-complete.vim
 endif
 source $XDG_CONFIG_HOME/nvim/plug-config/_vim-slime.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_airline.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/_airline.vim
+luafile $XDG_CONFIG_HOME/nvim/plug-config/_lualine.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_ultisnips.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_fugitive.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_vimwiki.vim
