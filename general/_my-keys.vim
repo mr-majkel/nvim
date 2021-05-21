@@ -59,10 +59,11 @@ nnoremap <silent> <leader>tt :call Termbinds()<CR>
 
 function Termbinds() abort
   if &buftype ==# 'terminal'
+    let s:job_id=b:terminal_job_id
     echo 'The job id is'
-    echo b:terminal_job_id
+    echo s:job_id
   else
-    echo b:slime_config
+    SlimeConfig
   endif
 endfunction
 
