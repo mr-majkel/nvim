@@ -22,4 +22,5 @@ Plug 'jpalardy/vim-slime'
 Plug 'vimwiki/vimwiki'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'hoob3rt/lualine.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
