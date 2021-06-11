@@ -7,7 +7,11 @@ let g:slime_paste_file = '~/.slime_paste'
 function! SlimeTermV() abort
   vsplit
   enew
-  terminal bash
+  if has("win32")
+    terminal C:\Users\modzmi01\AppData\Local\Programs\Git\usr\bin\bash.exe
+  else
+    terminal bash
+  endif
   let l:cur_dir = "cd " . getcwd()
   let l:repl_job_id = b:terminal_job_id
   " Go to previous split.
