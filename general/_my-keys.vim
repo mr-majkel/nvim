@@ -79,3 +79,6 @@ vnoremap <leader>y "+y
 
 " enter command mode
 nnoremap z; :
+
+" quicker switch
+nnoremap <c-s> <c-^>

@@ -4,6 +4,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'vifm/vifm.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -22,4 +23,5 @@ Plug 'jpalardy/vim-slime'
 Plug 'vimwiki/vimwiki'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'hoob3rt/lualine.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
