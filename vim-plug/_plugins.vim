@@ -25,7 +25,7 @@ Plug 'raghur/vim-ghost', {'do': 'GhostInstall'}
 Plug 'kristijanhusak/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'hoob3rt/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
