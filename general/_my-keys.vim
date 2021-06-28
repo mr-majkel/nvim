@@ -82,3 +82,6 @@ nnoremap z; :
 
 " quicker switch
 nnoremap <c-s> <c-^>
+
+" yank to end of line
+nnoremap Y y$

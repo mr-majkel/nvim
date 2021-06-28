@@ -29,4 +29,6 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'hoob3rt/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
 call plug#end()
