@@ -31,4 +31,5 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'NTBBloodbath/rest.nvim'
 call plug#end()
