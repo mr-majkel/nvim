@@ -9,6 +9,7 @@ let g:gruvbox_contrast_light='hard'
 colorscheme gruvbox
 set termguicolors
 set background=dark
+highlight Normal guibg=NONE
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-devicons.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
