@@ -1,5 +1,6 @@
 lua << EOF
 local nvim_lsp = require('lspconfig')
+local coq = require('coq')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -50,12 +51,12 @@ end
 -- and map buffer local keybindings when the language server attaches
 local servers = { "pyright", "vimls", "tsserver", "r_language_server"}
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+  nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({on_attach}))
 end
 EOF
 
 augroup completion_lua
-  autocmd BufEnter * lua require'completion'.on_attach()
+  " autocmd BufEnter * lua require'completion'.on_attach()
   autocmd FileType sql let g:completion_trigger_character = ['.', '"', '`', '['] 
 augroup END
 

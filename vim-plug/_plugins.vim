@@ -32,4 +32,5 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
 Plug 'NTBBloodbath/rest.nvim'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 call plug#end()

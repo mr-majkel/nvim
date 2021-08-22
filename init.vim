@@ -17,6 +17,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_telescope.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_coq.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.vim
 if !exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/plug-config/_firenvim.vim
@@ -30,6 +31,6 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_doge.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_rest.vim
 source $XDG_CONFIG_HOME/nvim/general/_my-keys.vim
 source $XDG_CONFIG_HOME/nvim/general/neovide.vim
-luafile $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkey.vim
 
