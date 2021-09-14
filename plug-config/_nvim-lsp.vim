@@ -1,4 +1,11 @@
 lua << EOF
+vim.lsp.set_log_level("trace")
+local cmp = require'cmp'.setup {
+  sources = {
+    { name = 'nvim_lsp' }
+  }
+}
+
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -49,13 +56,16 @@ end
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
 local servers = { "pyright", "vimls", "tsserver", "r_language_server"}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+  nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities}
 end
 EOF
 
 augroup completion_lua
-  autocmd BufEnter * lua require'completion'.on_attach()
+"  autocmd BufEnter * lua require'completion'.on_attach()
   autocmd FileType sql let g:completion_trigger_character = ['.', '"', '`', '['] 
 augroup END
 
