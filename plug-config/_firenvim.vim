@@ -23,4 +23,11 @@ augroup END
 
 if exists('g:started_by_firenvim')
   set background=light
+  let g:firenvim_config = { 
+      \ 'globalSettings': {
+          \ 'takeover': 'never'
+      \  },
+      \ 'localSettings': {
+      \ },
+  \ }
 endif
