@@ -14,7 +14,7 @@ highlight LineNr guifg=#5eacd3
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-devicons.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_telescope.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.vim
