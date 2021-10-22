@@ -1,9 +1,15 @@
 lua << EOF
 local cmp = require'cmp'.setup {
   sources = {
-    { name = 'nvim_lsp' }
+    { name = 'nvim_lsp',
+      name = 'path',
+      name = 'buffer',
+      name = 'nvim_lua',
+    }
   }
 }
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
@@ -55,8 +61,6 @@ end
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
 local servers = { "pyright", "vimls", "tsserver" }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities}
