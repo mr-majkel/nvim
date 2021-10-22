@@ -1,2 +1,17 @@
-nnoremap <leader>rr :lua require('rest-nvim').run()<cr>
-nnoremap <leader>rc :lua require('rest-nvim').run(true)<cr>
+lua << EOF
+require("rest-nvim").setup({
+  -- Open request results in a horizontal split
+  result_split_horizontal = false,
+  -- Skip SSL verification, useful for unknown certificates
+  skip_ssl_verification = false,
+  -- Highlight request on run
+  highlight = {
+    enabled = true,
+    timeout = 150,
+  },
+  -- Jump to request line on run
+  jump_to_request = false,
+})
+EOF
+nmap <leader>rr <Plug>RestNvim
+nmap <leader>rc <Plug>RestNvimPreview
