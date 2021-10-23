@@ -14,6 +14,9 @@ cmp.setup {
   { name = 'path' },
   { name = 'buffer' },
   { name = 'nvim_lua' },
+  },
+   mapping = {
+  ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
   }
 }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
