@@ -10,9 +10,11 @@ lua << EOF
 local cmp = require'cmp'
 cmp.setup {
   sources = {
-  { name = 'nvim_lsp' },
+  { name = 'nvim_lsp',
+    keyword_length = 5 },
   { name = 'path' },
-  { name = 'buffer' },
+  { name = 'buffer',
+    keyword_length = 5 },
   { name = 'nvim_lua' },
   },
    mapping = {
