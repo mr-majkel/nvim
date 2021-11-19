@@ -13,6 +13,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'morhetz/gruvbox'
 Plug 'rose-pine/neovim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'navarasu/onedark.nvim'
 Plug 'tpope/vim-fugitive'
 " Plug 'sindrets/diffview.nvim'
 " Plug 'TimUntersberger/neogit'

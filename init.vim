@@ -5,7 +5,7 @@ else
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
 endif
 " source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
-colorscheme onenord
+colorscheme gruvbox
 set termguicolors
 set background=dark
 highlight Normal guibg=NONE
