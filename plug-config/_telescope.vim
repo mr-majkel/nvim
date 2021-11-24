@@ -1,10 +1,12 @@
 lua << EOF
 require("telescope").setup {
   defaults = {
-    -- Your defaults config goes in here
+    layout_config = {
+        center = { width = 120 }
+      },
+    path_display = { "smart" }
   },
   pickers = {
-    -- Your special builtin config goes in here
     buffers = {
       sort_lastused = true,
       theme = "dropdown",
@@ -20,8 +22,8 @@ require("telescope").setup {
       }
     },
     find_files = {
-      theme = "dropdown"
-    }
+        theme = "dropdown"
+      }
   },
   extensions = {
     -- Your extension config goes in here

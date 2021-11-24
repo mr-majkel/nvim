@@ -4,8 +4,7 @@ if exists("$DOCKER_CONTAINER")
 else
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
 endif
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='hard'
+" source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 colorscheme gruvbox
 set termguicolors
 set background=dark

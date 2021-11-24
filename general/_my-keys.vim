@@ -85,3 +85,6 @@ nnoremap <c-s> <c-^>
 
 " yank to end of line
 nnoremap Y y$
+
+" python debugging
+tnoremap <C-n><C-p> python -m unittest discover tests -v
