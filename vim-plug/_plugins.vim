@@ -30,4 +30,5 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
 Plug 'NTBBloodbath/rest.nvim'
+Plug 'chipsenkbeil/distant.nvim'
 call plug#end()

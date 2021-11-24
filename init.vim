@@ -31,4 +31,5 @@ source $XDG_CONFIG_HOME/nvim/general/_my-keys.vim
 source $XDG_CONFIG_HOME/nvim/general/neovide.vim
 luafile $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkey.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_distant.lua
 

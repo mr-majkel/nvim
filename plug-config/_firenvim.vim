@@ -14,6 +14,9 @@ function! OnUIEnter(event) abort
     set columns=110
     set wrap
     set linebreak
+    set breakindent
+    nnoremap j gj
+    nnoremap k gk
   endif
 endfunction
 
@@ -28,5 +31,5 @@ if exists('g:started_by_firenvim')
         \ '.*':{
           \ 'takeover':'never'}
         \},
-  \ }
+        \ }
 endif
