@@ -16,7 +16,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_telescope.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.lua
 if !exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/plug-config/_rest.vim
   source $XDG_CONFIG_HOME/nvim/plug-config/_firenvim.vim
