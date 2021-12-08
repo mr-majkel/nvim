@@ -34,4 +34,6 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
 Plug 'NTBBloodbath/rest.nvim'
 Plug 'chipsenkbeil/distant.nvim'
+Plug 'folke/twilight.nvim'
+Plug 'folke/zen-mode.nvim'
 call plug#end()
