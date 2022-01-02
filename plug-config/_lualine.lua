@@ -32,7 +32,7 @@ require('lualine').setup{
             lualine_c = { 'location' },
             lualine_x = { 'encoding', 'fileformat'},
             lualine_y = { {'branch', icon = ''}, 'diff' },
-            lualine_z = { lsp_status, {'diagnostics', sources = {'nvim_lsp'}} },
+            lualine_z = { lsp_status, {'diagnostics', sources = {'nvim_diagnostic'}} },
           },
           inactive_sections = {
             lualine_a = {  },
