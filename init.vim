@@ -5,6 +5,7 @@ else
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
 endif
 " source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 colorscheme kanagawa
 set termguicolors
 set background=dark
@@ -28,7 +29,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_fugitive.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_vimwiki.vim
 source $XDG_CONFIG_HOME/nvim/general/_my-keys.vim
 source $XDG_CONFIG_HOME/nvim/general/neovide.vim
-luafile $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkey.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_distant.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_focus.lua
