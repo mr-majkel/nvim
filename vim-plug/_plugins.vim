@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 Plug 'romgrk/lib.kom'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
