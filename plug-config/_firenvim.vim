@@ -17,6 +17,7 @@ function! OnUIEnter(event) abort
     set breakindent
     nnoremap j gj
     nnoremap k gk
+    colorscheme kanagawa
   endif
 endfunction
 
@@ -25,7 +26,7 @@ augroup firenvim
 augroup END
 
 if exists('g:started_by_firenvim')
-  set background=light
+  " set background=light
   let g:firenvim_config = { 
       \ 'localSettings': {
         \ '.*':{
