@@ -33,4 +33,6 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_gitsigns.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkey.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_distant.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_focus.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_trouble.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_todo-comments.lua
 

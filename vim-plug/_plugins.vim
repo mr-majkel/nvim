@@ -37,4 +37,6 @@ Plug 'NTBBloodbath/rest.nvim'
 Plug 'chipsenkbeil/distant.nvim'
 Plug 'folke/twilight.nvim'
 Plug 'folke/zen-mode.nvim'
+Plug 'folke/trouble.nvim'
+Plug 'folke/todo-comments.nvim'
 call plug#end()
