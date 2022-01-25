@@ -1,3 +1,4 @@
+local def_colors = require('kanagawa.colors').setup()
 require('kanagawa').setup({
     undercurl = true,           -- enable undercurls
     commentStyle = "italic",
@@ -11,5 +12,7 @@ require('kanagawa').setup({
     transparent = false,        -- do not set background color
     dimInactive = true,        -- dim inactive window `:h hl-NormalNC`
     colors = {},
-    overrides = {},
+    overrides = {
+      Visual= {bg = def_colors.waveBlue2}
+  },
 })

@@ -21,6 +21,7 @@ set mouse=a                                  " Enable your mouse
 " behave mswin
 set colorcolumn=80                           " color column no.80
 set hidden
+set foldlevelstart=99                         "do not fold close by default
 
 " source $VIMRUNTIME/mswin.vim                 " make sure windows Ctrl-C/V works
 " :cd ~                                        " start at home directory

@@ -29,6 +29,7 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'jpalardy/vim-slime'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'vimwiki/vimwiki'
+Plug 'tools-life/taskwiki'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'vim-pandoc/vim-pandoc'
