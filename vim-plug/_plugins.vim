@@ -9,7 +9,6 @@ Plug 'vifm/vifm.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
-Plug 'liuchengxu/vim-which-key'
 Plug 'morhetz/gruvbox'
 Plug 'rose-pine/neovim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
@@ -40,4 +39,5 @@ Plug 'folke/twilight.nvim'
 Plug 'folke/zen-mode.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'folke/todo-comments.nvim'
+Plug 'folke/which-key.nvim'
 call plug#end()
