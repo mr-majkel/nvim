@@ -41,4 +41,5 @@ Plug 'folke/trouble.nvim'
 Plug 'folke/todo-comments.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'mracos/mermaid.vim'
+Plug 'ojroques/vim-oscyank'
 call plug#end()
