@@ -1,11 +1,13 @@
 source $XDG_CONFIG_HOME/nvim/general/_settings.vim
+
 if exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins_docker.vim
 else
-  source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins.vim
+  source $XDG_CONFIG_HOME/nvim/packer/plugins.lua
 endif
 " source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
+
 colorscheme kanagawa
 set termguicolors
 set background=dark
