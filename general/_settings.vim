@@ -2,6 +2,7 @@ let mapleader="\<Space>"
 " let &shell='bash.exe'
 " let &shell='C:/Users/modzmi01/Documents/PowerShell-7.0.3-win-x64/pwsh.exe'
 
+set fileformats=unix,dos                      " make linux format preffered
 set splitright " split to the right
 set completeopt=noinsert,menuone,noselect
 set nu                                        " line numbers
