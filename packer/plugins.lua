@@ -53,6 +53,8 @@ return require('packer').startup(function(use)
   use 'mracos/mermaid.vim'
   use 'ojroques/vim-oscyank'
   use 'danymat/neogen'
+  use 'mfussenegger/nvim-dap'
+  use 'mfussenegger/nvim-dap-python'
 
   if packer_bootstrap then
     require('packer').sync()
