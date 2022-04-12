@@ -38,4 +38,5 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_trouble.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_todo-comments.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkeynvim.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_neogen.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_dap.lua
 

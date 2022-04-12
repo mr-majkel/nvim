@@ -55,6 +55,8 @@ return require('packer').startup(function(use)
   use 'danymat/neogen'
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
+  use 'untitled-ai/jupyter_ascending.vim'
+  use 'goerz/jupytext.vim'
 
   if packer_bootstrap then
     require('packer').sync()
