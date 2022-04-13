@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap-python'
   use 'untitled-ai/jupyter_ascending.vim'
   use 'goerz/jupytext.vim'
+  use 'stevearc/aerial.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
