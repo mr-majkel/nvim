@@ -25,6 +25,7 @@ require('lualine').setup{
             component_separators = {},
             disabled_filetypes = {},
             icons_enabled = true,
+            globalstatus = true,
           },
           sections = {
             lualine_a = { {'mode', upper = true} },
