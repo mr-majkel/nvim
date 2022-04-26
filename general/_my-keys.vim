@@ -39,7 +39,7 @@ function NetrwToggle() abort
 endfunction 
 
 " Open default editor for file browsing
-nnoremap <Leader>nn :call NetrwToggle()<CR>
+" nnoremap <Leader>nn :call NetrwToggle()<CR>
 
 " Switch buffers
 nnoremap <leader>gj :bprevious<cr>
