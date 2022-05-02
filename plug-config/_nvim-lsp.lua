@@ -9,10 +9,16 @@ local cmp = require'cmp'
 cmp.setup {
   sources = {
   { name = 'nvim_lsp',
-    keyword_length = 5 },
+    keyword_length = 4 },
   { name = 'path' },
   { name = 'buffer',
-    keyword_length = 5 },
+    keyword_length = 4,
+    option = {
+      get_buffers = function()
+      return vim.api.nvim_list_wins()
+    end,
+  }
+  },
   { name = 'nvim_lua' },
   },
    mapping = {
