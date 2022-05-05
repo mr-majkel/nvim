@@ -28,3 +28,5 @@ set laststatus=3                              "global statusline
 " source $VIMRUNTIME/mswin.vim                 " make sure windows Ctrl-C/V works
 " :cd ~                                        " start at home directory
 
+set termguicolors
+set background=dark

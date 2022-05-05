@@ -25,12 +25,10 @@ augroup firenvim
   autocmd UIEnter * call OnUIEnter(deepcopy(v:event))
 augroup END
 
-if exists('g:started_by_firenvim')
-  " set background=light
-  let g:firenvim_config = { 
+let g:firenvim_config = { 
       \ 'localSettings': {
         \ '.*':{
-          \ 'takeover':'never'}
+        \ 'takeover':'never',
+        \}
         \},
-        \ }
-endif
+        \}
