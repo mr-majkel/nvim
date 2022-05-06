@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/telescope.nvim'
-  use 'morhetz/gruvbox'
+  use 'ellisonleao/gruvbox.nvim'
   use 'rose-pine/neovim'
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use 'navarasu/onedark.nvim'
