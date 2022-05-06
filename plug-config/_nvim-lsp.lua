@@ -5,14 +5,26 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 -- Avoid showing message extra message when using completion
 vim.o.shortmess = vim.o.shortmess .. 'c' 
 
+local get_bufnrs = function()
+  local bufs = {}
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    bufs[vim.api.nvim_win_get_buf(win)] = true
+  end
+  return vim.tbl_keys(bufs)
+end
+
 local cmp = require'cmp'
 cmp.setup {
   sources = {
   { name = 'nvim_lsp',
-    keyword_length = 5 },
+    keyword_length = 4 },
   { name = 'path' },
   { name = 'buffer',
-    keyword_length = 5 },
+    keyword_length = 4,
+    option = {
+      get_bufnrs = get_bufnrs,
+  }
+  },
   { name = 'nvim_lua' },
   },
    mapping = {
@@ -79,5 +91,32 @@ nvim_lsp["r_language_server"].setup {
 
 -- ]])
 
+local runtime_path = vim.split(package.path, ';')
 
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
 
+require'lspconfig'.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+        -- Setup your lua path
+        path = runtime_path,
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
