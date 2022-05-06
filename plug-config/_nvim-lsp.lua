@@ -5,6 +5,14 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 -- Avoid showing message extra message when using completion
 vim.o.shortmess = vim.o.shortmess .. 'c' 
 
+local get_bufnrs = function()
+  local bufs = {}
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    bufs[vim.api.nvim_win_get_buf(win)] = true
+  end
+  return vim.tbl_keys(bufs)
+end
+
 local cmp = require'cmp'
 cmp.setup {
   sources = {
@@ -14,9 +22,7 @@ cmp.setup {
   { name = 'buffer',
     keyword_length = 4,
     option = {
-      get_buffers = function()
-      return vim.api.nvim_list_wins()
-    end,
+      get_bufnrs = get_bufnrs,
   }
   },
   { name = 'nvim_lua' },
