@@ -38,5 +38,6 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_neogen.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_dap.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_aerial.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-ipy.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_neorg.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkeynvim.lua
 
