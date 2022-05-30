@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
   use 'untitled-ai/jupyter_ascending.vim'
   use 'goerz/jupytext.vim'
   use 'stevearc/aerial.nvim'
-  use 'bfredl/nvim-ipy'
+  use {'bfredl/nvim-ipy', run = ":UpdatetRemotePlugins"}
 
   if packer_bootstrap then
     require('packer').sync()
