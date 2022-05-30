@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/telescope.nvim'
-  use 'morhetz/gruvbox'
+  use 'ellisonleao/gruvbox.nvim'
   use 'rose-pine/neovim'
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use 'navarasu/onedark.nvim'
@@ -49,7 +49,6 @@ return require('packer').startup(function(use)
   use 'folke/zen-mode.nvim'
   use 'folke/trouble.nvim'
   use 'folke/todo-comments.nvim'
-  use 'folke/which-key.nvim'
   use 'mracos/mermaid.vim'
   use 'ojroques/vim-oscyank'
   use 'danymat/neogen'
@@ -59,6 +58,8 @@ return require('packer').startup(function(use)
   use 'goerz/jupytext.vim'
   use 'stevearc/aerial.nvim'
   use {'bfredl/nvim-ipy', run = ":UpdatetRemotePlugins"}
+  use 'nvim-neorg/neorg'
+  use 'folke/which-key.nvim'
 
   if packer_bootstrap then
     require('packer').sync()

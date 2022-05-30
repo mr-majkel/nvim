@@ -9,9 +9,7 @@ endif
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 
 colorscheme kanagawa
-set termguicolors
-set background=dark
-highlight Normal guibg=NONE
+" highlight Normal guibg=NONE
 highlight LineNr guifg=#5eacd3
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-devicons.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
@@ -40,5 +38,6 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_neogen.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_dap.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_aerial.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-ipy.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_neorg.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_whichkeynvim.lua
 
