@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
   use 'untitled-ai/jupyter_ascending.vim'
   use 'goerz/jupytext.vim'
   use 'stevearc/aerial.nvim'
-  use {'bfredl/nvim-ipy', run = ":UpdatetRemotePlugins"}
+  use {'bfredl/nvim-ipy', run = ":UpdateRemotePlugins"}
   use 'nvim-neorg/neorg'
   use 'folke/which-key.nvim'
 
