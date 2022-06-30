@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use 'stevearc/aerial.nvim'
   use {'bfredl/nvim-ipy', run = ":UpdateRemotePlugins"}
   use 'nvim-neorg/neorg'
+  use { 'wthollingsworth/pomodoro.nvim', requires = 'MunifTanjim/nui.nvim' }
   use 'folke/which-key.nvim'
 
   if packer_bootstrap then
