@@ -5,8 +5,9 @@ if exists("$DOCKER_CONTAINER")
 else
   source $XDG_CONFIG_HOME/nvim/packer/plugins.lua
 endif
-" source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_catppuccin.lua
 
 colorscheme kanagawa
 " highlight Normal guibg=NONE

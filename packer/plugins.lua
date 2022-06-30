@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use 'navarasu/onedark.nvim'
   use 'rebelot/kanagawa.nvim'
+  use({ "catppuccin/nvim", as = "catppuccin" })
   use 'tpope/vim-fugitive'
   use 'kyazdani42/nvim-web-devicons'
   use 'romgrk/barbar.nvim'
