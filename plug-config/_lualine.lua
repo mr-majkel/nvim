@@ -20,7 +20,7 @@ local lsp_status = {
 
 require('lualine').setup{
   options = {
-            theme = 'gruvbox',
+            theme = 'rose-pine',
             section_separators = {'', ''},
             component_separators = {},
             disabled_filetypes = {},

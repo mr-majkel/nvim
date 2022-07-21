@@ -8,10 +8,12 @@ endif
 source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_catppuccin.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_rose-pine.lua
 
-colorscheme kanagawa
+colorscheme rose-pine
 " highlight Normal guibg=NONE
-highlight LineNr guifg=#5eacd3
+" highlight LineNr guifg=#5eacd3
+" highlight CursorLineNr guifg=#ffca00
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-devicons.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
