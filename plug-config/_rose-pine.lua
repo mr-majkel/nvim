@@ -1,14 +1,14 @@
 require('rose-pine').setup({
 	--- @usage 'main' | 'moon'
-	dark_variant = 'main',
-	bold_vert_split = true,
+	dark_variant = 'moon',
+	bold_vert_split = false,
 	dim_nc_background = true,
 	disable_background = true,
 	disable_float_background = true,
 	disable_italics = false,
 	--- @usage string hex value or named color from rosepinetheme.com/palette
 	groups = {
-		background = 'base',
+		background = '#101214',
 		panel = 'surface',
 		border = 'highlight_med',
 		comment = 'muted',
@@ -31,7 +31,8 @@ require('rose-pine').setup({
 	},
 	-- Change specific vim highlight groups
 	highlight_groups = {
-		CursorLineNr = { fg = 'gold' }
+		CursorLineNr = { fg = 'gold' },
+                NormalNC = { bg = '#101214' }
 	}
 })
 
