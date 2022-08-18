@@ -30,7 +30,8 @@ return require('packer').startup(function(use)
   use({ "catppuccin/nvim", as = "catppuccin" })
   use 'tpope/vim-fugitive'
   use 'kyazdani42/nvim-web-devicons'
-  use 'romgrk/barbar.nvim'
+  use 'crispgm/nvim-tabline'
+  -- use 'romgrk/barbar.nvim'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'

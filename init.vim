@@ -15,7 +15,8 @@ colorscheme rose-pine
 " highlight LineNr guifg=#5eacd3
 " highlight CursorLineNr guifg=#ffca00
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-devicons.vim
-source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_tabline-nvim.lua
+" source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
