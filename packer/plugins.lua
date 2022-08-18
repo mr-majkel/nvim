@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
+  use 'mfussenegger/nvim-lint'
   use 'jpalardy/vim-slime'
   use { 'glacambre/firenvim',  run = function() vim.fn['firenvim#install'](0) end }
   use 'vimwiki/vimwiki'
