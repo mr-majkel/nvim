@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'kyazdani42/nvim-web-devicons'
   use 'crispgm/nvim-tabline'
+  use 'ThePrimeagen/harpoon'
   -- use 'romgrk/barbar.nvim'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
