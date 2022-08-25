@@ -82,6 +82,8 @@ nvim_lsp["r_language_server"].setup {
     }
 }
 
+nvim_lsp["gopls"].setup({capabilities = capabilities, on_attach = on_attach})
+
 -- vim.cmd([[
 -- augroup completion_lua
 --   autocmd FileType sql let g:completion_trigger_character = ['.', '"', '`', '['] 

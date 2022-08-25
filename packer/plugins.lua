@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-startify'
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'nvim-treesitter/playground'
   use 'vifm/vifm.vim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
