@@ -1,4 +1,4 @@
-source $XDG_CONFIG_HOME/nvim/general/_settings.vim
+source $XDG_CONFIG_HOME/nvim/general/_settings.lua
 
 if exists("$DOCKER_CONTAINER")
   source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins_docker.vim
