@@ -29,3 +29,5 @@ o.laststatus=3 --global statusline
 
 o.termguicolors = true
 o.background = "dark"
+
+o.list = true
