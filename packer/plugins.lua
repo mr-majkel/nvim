@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'rebelot/kanagawa.nvim'
   use({ "catppuccin/nvim", as = "catppuccin" })
+  use 'Shatur/neovim-ayu'
   use 'tpope/vim-fugitive'
   use 'kyazdani42/nvim-web-devicons'
   use 'crispgm/nvim-tabline'

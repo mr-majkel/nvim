@@ -9,8 +9,9 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_catppuccin.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_rose-pine.lua
+source $XDG_CONFIG_HOME/nvim/plug-config/_ayu.lua
 
-colorscheme kanagawa
+colorscheme ayu-dark
 " highlight Normal guibg=NONE
 " highlight LineNr guifg=#5eacd3
 " highlight CursorLineNr guifg=#ffca00
