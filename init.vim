@@ -10,7 +10,7 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_catppuccin.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_rose-pine.lua
 
-colorscheme rose-pine
+colorscheme kanagawa
 " highlight Normal guibg=NONE
 " highlight LineNr guifg=#5eacd3
 " highlight CursorLineNr guifg=#ffca00
