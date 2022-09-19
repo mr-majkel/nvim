@@ -9,7 +9,7 @@ endfunction
 
 function! OnUIEnter(event) abort
   if s:IsFirenvimActive(a:event)
-    set guifont=UbuntuMono\ Nerd\ Font
+    set guifont=UbuntuMono\ Nerd\ Font:h14
     set lines=20
     set columns=110
     set wrap
@@ -17,7 +17,6 @@ function! OnUIEnter(event) abort
     set breakindent
     nnoremap j gj
     nnoremap k gk
-    colorscheme kanagawa
   endif
 endfunction
 
