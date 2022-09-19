@@ -32,8 +32,9 @@ o.background = "dark"
 
 o.list = true
 
-group = vim.api.nvim_create_augroup("YankGroup", {clear = true})
+local yank_group = vim.api.nvim_create_augroup("YankGroup", {clear = true})
 vim.api.nvim_create_autocmd({"TextYankPost"},
-  {group = group, callback = function()
+  {group = yank_group, callback = function()
     vim.highlight.on_yank({higroup="IncSearch", timeout=100}) 
   end})
+
