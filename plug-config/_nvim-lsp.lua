@@ -36,6 +36,13 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local nvim_lsp = require('lspconfig')
 
+local handlers = {
+  ["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    -- Use a sharp border with `FloatBorder` highlights
+    border = "single"
+  })
+}
 
 local on_attach = function(client, bufnr)
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -71,7 +78,7 @@ end
 local servers = { "pyright", "vimls", "tsserver", "jsonls"}
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {capabilities = capabilities, on_attach = on_attach}
+  nvim_lsp[lsp].setup {capabilities = capabilities, on_attach = on_attach, handlers = handlers}
 end
 
 nvim_lsp["r_language_server"].setup {
