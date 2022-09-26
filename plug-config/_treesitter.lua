@@ -29,7 +29,16 @@ require'nvim-treesitter.configs'.setup {
       goto_node = '<cr>',
       show_help = '?',
     },
-  }
+  },
+  swap = {
+    enable = true,
+    swap_next = {
+      ["<leader>m"] = {"@parameter.inner"},
+    },
+    swap_previous = {
+      ["<leader>M"] = {"@parameter.inner"},
+    },
+  },
 }
 
 require('nvim-treesitter.install').compilers = {"clang"}
