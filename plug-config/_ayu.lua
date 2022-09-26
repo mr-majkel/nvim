@@ -5,9 +5,9 @@ require('ayu').setup({
   mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
   overrides = {
     String = {fg = colors.vcs_added},
-    LineNr = {fg="#5eacd3"},
-    VertSplit = {fg = "#555555", bg="#111111"},
-    NormalNC = {bg = "#111111"},
+    LineNr = {fg="#dddddd"},
+    VertSplit = {fg = "#555555", bg="#222222"},
+    NormalNC = {bg = "#222222"},
     NormalFloat = {bg = "#121212"},
     FloatBorder = {fg = "#888888", bg = "#121212"},
 
