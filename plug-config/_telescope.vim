@@ -36,7 +36,6 @@ nnoremap <leader>fg <cmd>Telescope git_branches<cr>
 nnoremap <leader>fr <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{ show_all_buffers = true }<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fd <cmd>Telescope file_browser<cr>
 nnoremap <silent>gr <cmd>lua require'telescope.builtin'.lsp_references{ path_display = "shorten" }<CR>
 nnoremap <leader>ft <cmd>Telescope treesitter<CR>
 nnoremap <leader>// <cmd>Telescope current_buffer_fuzzy_find<CR>
