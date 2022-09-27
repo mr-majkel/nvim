@@ -38,16 +38,21 @@ require'nvim-treesitter.configs'.setup {
         ["as"] = "@parameter.outer",
       },
     },
-    swap = {
-      enable = true,
-      swap_next = {
-        ["gs"] = {"@parameter.inner"},
-      },
-      swap_previous = {
-        ["gS"] = {"@parameter.inner"},
-      },
-    },
+    -- swap = {
+    --   enable = true,
+    --   swap_next = {
+    --     ["gs"] = {"@parameter.inner"},
+    --   },
+    --   swap_previous = {
+    --     ["gS"] = {"@parameter.inner"},
+    --   },
+    -- },
   },
 }
 
 require('nvim-treesitter.install').compilers = {"clang"}
+
+-- temporary fix for swapping
+vim.api.nvim_set_keymap("n", "gs", ":TSTextobjectSwapNext @parameter.inner<cr>", {silent = true, noremap=true, desc="Swap with next node"})
+vim.api.nvim_set_keymap("n", "gS", ":TSTextobjectSwapPrevious @parameter.inner<cr>", {silent = true, noremap=true, desc="Swap with previous node"})
+
