@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/telescope.nvim'
+  use 'tamago324/lir.nvim'
+  use 'tamago324/lir-git-status.nvim'
   use {'norcalli/nvim-colorizer.lua', config=function() require'colorizer'.setup() end}
   use 'ellisonleao/gruvbox.nvim'
   use 'rose-pine/neovim'

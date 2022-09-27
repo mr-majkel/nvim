@@ -1,10 +1,7 @@
 source $XDG_CONFIG_HOME/nvim/general/_settings.lua
 
-if exists("$DOCKER_CONTAINER")
-  source $XDG_CONFIG_HOME/nvim/vim-plug/_plugins_docker.vim
-else
-  source $XDG_CONFIG_HOME/nvim/packer/plugins.lua
-endif
+source $XDG_CONFIG_HOME/nvim/packer/plugins.lua
+
 source $XDG_CONFIG_HOME/nvim/plug-config/_gruvbox.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_kanagawa.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_catppuccin.lua
@@ -21,7 +18,8 @@ source $XDG_CONFIG_HOME/nvim/plug-config/_harpoon.lua
 " source $XDG_CONFIG_HOME/nvim/plug-config/_barbar.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_startify.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_treesitter.lua
-source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
+" source $XDG_CONFIG_HOME/nvim/plug-config/_vifm.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/_lir.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_telescope.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lsp.lua
 source $XDG_CONFIG_HOME/nvim/plug-config/_nvim-lint.lua
