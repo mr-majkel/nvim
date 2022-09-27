@@ -30,13 +30,22 @@ require'nvim-treesitter.configs'.setup {
       show_help = '?',
     },
   },
-  swap = {
-    enable = true,
-    swap_next = {
-      ["<leader>m"] = {"@parameter.inner"},
+  textobjects = {
+    select = {
+      enable=true,
+      keymaps={
+        ["is"] = "@parameter.inner",
+        ["as"] = "@parameter.outer",
+      },
     },
-    swap_previous = {
-      ["<leader>M"] = {"@parameter.inner"},
+    swap = {
+      enable = true,
+      swap_next = {
+        ["gs"] = {"@parameter.inner"},
+      },
+      swap_previous = {
+        ["gS"] = {"@parameter.inner"},
+      },
     },
   },
 }
