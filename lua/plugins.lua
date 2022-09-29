@@ -31,7 +31,7 @@ return require('packer').startup(function()
   use {'folke/trouble.nvim', cmd="Trouble", config=function() require"mm.plugins.trouble" end}
   use {'folke/todo-comments.nvim', event="BufWinEnter", config=function() require"mm.plugins.todo_comments" end}
   use {'stevearc/aerial.nvim', keys="<leader>a", config=function() require"mm.plugins.aerial" end}
-  use {'folke/which-key.nvim', keys=" ", config=function() require"mm.plugins.whichkeynvim" end}
+  use {'folke/which-key.nvim', keys="<leader><leader>", config=function() require"mm.plugins.whichkeynvim" end}
 
   -- rest api
   use {'NTBBloodbath/rest.nvim', ft="http", config=function() require"mm.plugins.rest" end}
@@ -59,7 +59,7 @@ return require('packer').startup(function()
 
   -- git
   use {'tpope/vim-fugitive', cmd="Git", keys="<leader>ee", config=function() require("mm.plugins.fugitive") end}
-  use {'lewis6991/gitsigns.nvim', event="BufWinEnter", config=function() require("mm.plugins.gitsigns") end}
+  use {'lewis6991/gitsigns.nvim', ft={"lua", "python", "vim"}, event="CursorHold", config=function() require("mm.plugins.gitsigns") end}
 
   -- lsp and completions and linters
   use {'neovim/nvim-lspconfig', event="CursorHold", config=function() require("mm.plugins.nvim_lsp") end, requires={

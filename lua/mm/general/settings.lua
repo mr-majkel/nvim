@@ -30,6 +30,8 @@ o.laststatus=3 --global statusline
 o.termguicolors = true
 o.background = "dark"
 
+o.updatetime = 1000
+
 o.list = true
 
 local yank_group = vim.api.nvim_create_augroup("YankGroup", {clear = true})
