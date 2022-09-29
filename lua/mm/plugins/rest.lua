@@ -1,4 +1,3 @@
-lua << EOF
 require("rest-nvim").setup({
   -- Open request results in a horizontal split
   result_split_horizontal = false,
@@ -12,6 +11,7 @@ require("rest-nvim").setup({
   -- Jump to request line on run
   jump_to_request = false,
 })
-EOF
-nmap <leader>rr <Plug>RestNvim
-nmap <leader>rc <Plug>RestNvimPreview
+
+local map = vim.keymap.set
+map("n", "<leader>rr", "<Plug>RestNvim", {remap=true})
+map("n", "<leader>rc", "<Plug>RestNvimPreview", {remap=true})

@@ -1,4 +1,3 @@
-lua << EOF
 require("telescope").setup {
   defaults = {
     layout_config = {
@@ -28,15 +27,13 @@ require("telescope").setup {
     -- Your extension config goes in here
   }
 }
-EOF
 
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope git_branches<cr>
-nnoremap <leader>fr <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>lua require'telescope.builtin'.buffers{ show_all_buffers = true }<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <silent>gr <cmd>lua require'telescope.builtin'.lsp_references{ path_display = "shorten" }<CR>
-nnoremap <leader>ft <cmd>Telescope treesitter<CR>
-nnoremap <leader>// <cmd>Telescope current_buffer_fuzzy_find<CR>
+local map = vim.keymap.set
+map("n", "<leader>ff", require'telescope.builtin'.find_files)
+map("n", "<leader>fb", function() require'telescope.builtin'.buffers{ show_all_buffers = true } end)
+map("n", "<leader>fg", require'telescope.builtin'.git_branches)
+map("n", "<leader>fr", require'telescope.builtin'.live_grep)
+map("n", "<leader>fh", require'telescope.builtin'.help_tags)
+map("n", "<leader>gr", function() require'telescope.builtin'.lsp_references{ path_display = "shorten" } end)
+map("n", "<leader>ft", require'telescope.builtin'.treesitter)
  

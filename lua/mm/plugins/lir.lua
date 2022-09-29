@@ -78,7 +78,3 @@ require'nvim-web-devicons'.set_icon({
   }
 })
 
--- git integration
-require'lir.git_status'.setup({
-  show_ignored = false
-})
