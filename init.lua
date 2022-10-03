@@ -4,4 +4,4 @@ require 'plugins'
 require 'mm.general.my_keys'
 require 'colors'
 
-vim.cmd[[colorscheme ayu]]
+vim.cmd.colorscheme("ayu")
