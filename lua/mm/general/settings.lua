@@ -2,8 +2,6 @@ local o = vim.opt
 
 vim.g.mapleader=" "
 
-vim.opt_global.formatoptions:remove "o"
-
 o.fileformats={"unix", "dos"} --  make linux format preffered
 o.splitright = true -- split to the right
 o.completeopt={"noinsert", "menuone", "noselect"}
