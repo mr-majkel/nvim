@@ -2,6 +2,8 @@ local o = vim.opt
 
 vim.g.mapleader=" "
 
+vim.opt_global.formatoptions:remove "o"
+
 o.fileformats={"unix", "dos"} --  make linux format preffered
 o.splitright = true -- split to the right
 o.completeopt={"noinsert", "menuone", "noselect"}
@@ -14,11 +16,11 @@ o.smartindent = true
 o.hlsearch = true
 o.wrap = false
 
-o.sidescrolloff=10
-o.scrolloff=6
+o.sidescrolloff=20
+o.scrolloff=15
 o.incsearch=true
 o.inccommand="split" -- shows live changes for substitute
-o.cmdheight=2
+o.cmdheight=0
 o.shiftwidth=2; o.softtabstop=2; o.expandtab = true -- tab = 2 spaces always
 o.mouse="a" -- Enable your mouse 
 o.colorcolumn = {80} -- color column no.80
@@ -30,7 +32,7 @@ o.laststatus=3 --global statusline
 o.termguicolors = true
 o.background = "dark"
 
-o.updatetime = 1000
+o.updatetime = 500
 
 o.list = true
 
