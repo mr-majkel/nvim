@@ -23,7 +23,15 @@ cmp.setup {
   },
   mapping = {
     ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
-  }
+  },
+  enabled = function()
+    return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
+        or require("cmp_dap").is_dap_buffer()
+  end
 }
 
-
+require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+  sources = {
+    { name = "dap" },
+  },
+})

@@ -101,11 +101,14 @@ return require('packer').startup(function()
   use { 'vim-pandoc/vim-pandoc-syntax', ft = "markdown", after = "vim-pandoc" }
   use { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" }
 
+  -- dap
+  use { 'mfussenegger/nvim-dap', event = "BufRead" }
+  use { 'mfussenegger/nvim-dap-python', ft = "python", after = "nvim-dap", config = function() require("mm.plugins.dap") end }
+  use { "rcarriga/nvim-dap-ui", after="nvim-dap", config = function() require("dapui").setup() end, requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/cmp-dap", requires = {"mfussenegger/nvim-dap"} }
+
   -- python dev
   use { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end }
-  use { 'mfussenegger/nvim-dap', event = "BufRead" }
-  use { 'mfussenegger/nvim-dap-python', ft = "python", after = "nvim-dap",
-    config = function() require("mm.plugins.dap") end }
   use { 'untitled-ai/jupyter_ascending.vim', ft = "python" }
   use { 'goerz/jupytext.vim', ft = "python" }
   use { 'bfredl/nvim-ipy', ft = "python", config = function() require("mm.plugins.nvim_ipy") end }
