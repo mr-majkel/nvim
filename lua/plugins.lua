@@ -68,7 +68,7 @@ return require('packer').startup(function()
   use { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end, after = "telescope.nvim" }
 
   -- git
-  use { 'tpope/vim-fugitive', cmd = "Git", keys = "<leader>ee", config = function() require("mm.plugins.fugitive") end }
+  use { 'tpope/vim-fugitive', cmd = "Git", keys = {"<leader>ee", "<leader>ep"}, config = function() require("mm.plugins.fugitive") end }
   use { 'lewis6991/gitsigns.nvim', ft = { "lua", "python", "vim" }, event = "CursorHold",
     config = function() require("mm.plugins.gitsigns") end }
 
