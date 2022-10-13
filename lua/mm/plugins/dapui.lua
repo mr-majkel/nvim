@@ -20,8 +20,9 @@ local default_layouts = {
     },
   }
 
+local dapui = require("dapui")
 
-require("dapui").setup({
+dapui.setup({
   icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
   mappings = {
     -- Use a table to apply multiple mappings
@@ -93,3 +94,9 @@ require("dapui").setup({
     max_value_lines = 100, -- Can be integer or nil.
   }
 })
+
+
+ local keymap = vim.keymap.set
+ keymap("n", "<leader>dur", function() dapui.toggle({layout = 1, reset = true}) end, {silent = true, desc = "Toggle dapui repl layout (left)"})
+ keymap("n", "<leader>duc", function() dapui.toggle({layout = 1, reset = true}) end, {silent = true, desc = "Toggle dapui watches layout (right)"} )
+ keymap("n", "<leader>dua", function() dapui.toggle({reset = true}) end, {silent = true, desc = "Toggle all dapui layout (left & right)"} )
