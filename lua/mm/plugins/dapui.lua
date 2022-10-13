@@ -46,22 +46,28 @@ dapui.setup({
   layouts = {
     {
       elements = {
-        { id = "breakpoints", size = 0.10 },
-        { id = "scopes", size = 0.25 },
         "repl",
       },
-      size = 0.40, -- 25% of total lines
+      size = 0.30, -- 25% of total lines
+      position = "top",
+    },
+    {
+      elements = {
+        "scopes",
+        "breakpoints",
+        "stacks",
+      },
+      size = 40, -- 25% of total lines
       position = "left",
     },
     {
       elements = {
       -- Elements can be strings or table with id and size keys.
-        "stacks",
         "watches",
         "console",
       },
-      size = 40, -- 40 columns
-      position = "right",
+      size = 15, -- 40 columns
+      position = "bottom",
     },
   },
   controls = {
@@ -97,6 +103,7 @@ dapui.setup({
 
 
  local keymap = vim.keymap.set
- keymap("n", "<leader>dur", function() dapui.toggle({layout = 1, reset = true}) end, {silent = true, desc = "Toggle dapui repl layout (left)"})
- keymap("n", "<leader>duc", function() dapui.toggle({layout = 1, reset = true}) end, {silent = true, desc = "Toggle dapui watches layout (right)"} )
- keymap("n", "<leader>dua", function() dapui.toggle({reset = true}) end, {silent = true, desc = "Toggle all dapui layout (left & right)"} )
+ keymap("n", "<leader>dur", function() dapui.toggle({layout = 1, reset = true}) end, {silent = true, desc = "Toggle dapui repl layout (up)"})
+ keymap("n", "<leader>dus", function() dapui.toggle({layout = 2, reset = true}) end, {silent = true, desc = "Toggle dapui scopes layout (left)"} )
+ keymap("n", "<leader>duc", function() dapui.toggle({layout = 3, reset = true}) end, {silent = true, desc = "Toggle dapui console layout (left)"} )
+ keymap("n", "<leader>dua", function() dapui.toggle({reset = true}) end, {silent = true, desc = "Toggle all dapui layout"} )
