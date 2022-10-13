@@ -104,7 +104,7 @@ return require('packer').startup(function()
   -- dap
   use { 'mfussenegger/nvim-dap', event = "BufRead" }
   use { 'mfussenegger/nvim-dap-python', ft = "python", after = "nvim-dap", config = function() require("mm.plugins.dap") end }
-  use { "rcarriga/nvim-dap-ui", after="nvim-dap", config = function() require("dapui").setup() end, requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/nvim-dap-ui", after="nvim-dap", config = function() require("mm.plugins.dapui") end, requires = {"mfussenegger/nvim-dap"} }
   use { "rcarriga/cmp-dap", requires = {"mfussenegger/nvim-dap"} }
 
   -- python dev
