@@ -15,7 +15,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- lua
-  use { 'folke/lua-dev.nvim', ft = 'lua', config = function() require('lua-dev').setup({}) end }
+  use { 'folke/neodev.nvim', ft = 'lua', config = function() require('neodev').setup({}) end }
 
 
   -- colorscheme and looks
