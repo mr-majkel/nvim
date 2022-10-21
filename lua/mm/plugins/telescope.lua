@@ -34,6 +34,6 @@ map("n", "<leader>fb", function() require'telescope.builtin'.buffers{ show_all_b
 map("n", "<leader>fg", require'telescope.builtin'.git_branches)
 map("n", "<leader>fr", require'telescope.builtin'.live_grep)
 map("n", "<leader>fh", require'telescope.builtin'.help_tags)
-map("n", "<leader>gr", function() require'telescope.builtin'.lsp_references{ path_display = "shorten" } end)
+map("n", "<leader>gr", function() require'telescope.builtin'.lsp_references{ path_display = {"shorten" }} end)
 map("n", "<leader>ft", require'telescope.builtin'.treesitter)
  
