@@ -39,7 +39,7 @@ return require('packer').startup(function()
   use { 'folke/zen-mode.nvim', cmd = "ZenMode", config = function() require "mm.plugins.focus" end }
   use { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end }
   use { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end }
-  use { 'stevearc/aerial.nvim', event = "BufReadPost", config = function() require "mm.plugins.aerial" end }
+  use { 'stevearc/aerial.nvim', after="nvim-treesitter", config = function() require "mm.plugins.aerial" end }
   use { 'folke/which-key.nvim', event = "CursorHold", config = function() require "mm.plugins.whichkeynvim" end }
 
   -- rest api
