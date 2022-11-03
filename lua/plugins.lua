@@ -53,7 +53,7 @@ return require('packer').startup(function()
   use { 'https://gitlab.com/HiPhish/jinja.vim', as = 'jinja.vim', }
 
   -- treesitter
-  use { 'nvim-treesitter/nvim-treesitter', ft = { "python", "vim", "lua", "markdown" },
+  use { 'nvim-treesitter/nvim-treesitter', event="BufEnter",
     config = function() require "mm.plugins.treesitter" end }
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = "nvim-treesitter" }
   use { 'nvim-treesitter/playground', after = "nvim-treesitter" }
@@ -81,6 +81,7 @@ return require('packer').startup(function()
       { 'hrsh7th/cmp-nvim-lsp' },
     }
   }
+  use { "ray-x/lsp_signature.nvim", config = function() require("lsp_signature").setup() end}
 
 
 
