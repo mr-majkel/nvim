@@ -1,10 +1,11 @@
-local o = vim.opt
+local opt = vim.opt
+local o = vim.o
 
 vim.g.mapleader=" "
 
-o.fileformats={"unix", "dos"} --  make linux format preffered
+opt.fileformats={"unix", "dos"} --  make linux format preffered
 o.splitright = true -- split to the right
-o.completeopt={"noinsert", "menuone", "noselect"}
+opt.completeopt={"noinsert", "menuone", "noselect"}
 o.nu = true
 o.rnu = true
 o.cursorline = true
@@ -15,13 +16,14 @@ o.hlsearch = true
 o.wrap = false
 
 o.sidescrolloff=20
-o.scrolloff=15
+local scrolloff = 16
+o.scrolloff=scrolloff
 o.incsearch=true
 o.inccommand="split" -- shows live changes for substitute
 o.cmdheight=0
 o.shiftwidth=2; o.softtabstop=2; o.expandtab = true -- tab = 2 spaces always
 o.mouse="a" -- Enable your mouse 
-o.colorcolumn = {80} -- color column no.80
+o.colorcolumn = "80" -- color column no.80
 o.hidden = true
 o.foldlevelstart=99 --do not fold close by default
 o.laststatus=3 --global statusline
@@ -37,6 +39,15 @@ o.list = true
 local yank_group = vim.api.nvim_create_augroup("YankGroup", {clear = true})
 vim.api.nvim_create_autocmd({"TextYankPost"},
   {group = yank_group, callback = function()
-    vim.highlight.on_yank({higroup="IncSearch", timeout=100}) 
+    vim.highlight.on_yank({higroup="IncSearch", timeout=100})
   end})
 
+local terminal_group = vim.api.nvim_create_augroup("TerminalGroup", {clear = true})
+vim.api.nvim_create_autocmd({"TermEnter *"},
+  {group = terminal_group, callback = function()
+    vim.opt_local.scrolloff=0
+  end})
+vim.api.nvim_create_autocmd({"TermLeave *"},
+  {group = terminal_group, callback = function()
+    vim.opt_local.scrolloff=scrolloff
+  end})
