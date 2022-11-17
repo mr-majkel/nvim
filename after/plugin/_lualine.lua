@@ -18,6 +18,21 @@ local lsp_status = {
   color = { gui = 'bold'}
 }
 
+local macro_recording = {
+  function()
+    local reg = vim.fn.reg_recording()
+    local msg = nil
+    if reg == "" then
+      return msg
+    end
+    msg = "Recording macro: " .. reg
+    return msg
+  end,
+  icon = "@",
+  color = {gui = 'bold'},
+  cond = function() return vim.fn.reg_recording() ~= "" end,
+}
+
 require('lualine').setup{
   options = {
             theme = 'auto',
@@ -30,7 +45,7 @@ require('lualine').setup{
           sections = {
             lualine_a = { {'mode', upper = true} },
             lualine_b = { {'filename', file_status = true}, 'filetype' },
-            lualine_c = { 'location' },
+            lualine_c = { 'location', macro_recording},
             lualine_x = { 'encoding', 'fileformat'},
             lualine_y = { {'branch', icon = ''}, 'diff' },
             lualine_z = { lsp_status, {'diagnostics', sources = {'nvim_diagnostic'}} },
