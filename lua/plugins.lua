@@ -76,7 +76,7 @@ return require('packer').startup(function()
   use { 'tpope/vim-dadbod', config = function() vim.g.dbext_default_ORA_bin = "sql" end }
   use { "kristijanhusak/vim-dadbod-completion", after="nvim-cmp", }
   use { 'kristijanhusak/vim-dadbod-ui', config = function() vim.g.db_ui_env_variable_url = "sirlatam" end}
-  use { 'neovim/nvim-lspconfig', event = "BufReadPost", config = function() require("mm.plugins.nvim_lsp") end,
+  use { 'neovim/nvim-lspconfig', config = function() require("mm.plugins.nvim_lsp") end,
     requires = {
       { 'hrsh7th/cmp-nvim-lsp' },
     }
@@ -113,6 +113,7 @@ return require('packer').startup(function()
   use { 'untitled-ai/jupyter_ascending.vim', ft = "python" }
   use { 'goerz/jupytext.vim', ft = "python" }
   use { 'bfredl/nvim-ipy', ft = "python", config = function() require("mm.plugins.nvim_ipy") end }
+  use {'quarto-dev/quarto-nvim' , requires='jmbuhr/otter.nvim'}
 
   if packer_bootstrap then
     require('packer').sync()

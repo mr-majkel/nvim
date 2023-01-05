@@ -1,11 +1,11 @@
-inoremap <c-Space> <c-x><c-o>
+" inoremap <c-Space> <c-x><c-o>
 
 " Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " ins-complete file
-inoremap <C-f> <c-x><c-f>
+" inoremap <C-f> <c-x><c-f>
 
 " change windows backslashes
 nnoremap <leader>/ V:s/\\/\//g<cr>
