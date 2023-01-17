@@ -33,7 +33,7 @@ require("aerial").setup({
       -- Determines where the aerial window will be opened
       --   edge   - open aerial at the far right/left of the editor
       --   window - open aerial to the right/left of the current window
-      placement = "window",
+      placement = "edge",
     },
   
     -- Determines how the aerial window decides which buffer to display symbols for
@@ -45,7 +45,7 @@ require("aerial").setup({
     --   unfocus       - close aerial when you leave the original source window
     --   switch_buffer - close aerial when you change buffers in the source window
     --   unsupported   - close aerial when attaching to a buffer that has no symbol source
-    close_automatic_events = {},
+    close_automatic_events = {"unfocus"},
   
     -- Set to false to remove the default keybindings for the aerial buffer
     default_bindings = true,
