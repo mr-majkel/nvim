@@ -41,7 +41,7 @@ require('packer').startup(function()
   use { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end }
   use { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end }
   use { 'stevearc/aerial.nvim', after="nvim-treesitter", config = function() require "mm.plugins.aerial" end }
-  use { 'folke/which-key.nvim', event = "CursorHold", config = function() require "mm.plugins.whichkeynvim" end }
+  use { 'folke/which-key.nvim', config = function() require "mm.plugins.whichkeynvim" end }
 
   -- rest api
   use { 'NTBBloodbath/rest.nvim', ft = "http", config = function() require "mm.plugins.rest" end }
@@ -54,7 +54,7 @@ require('packer').startup(function()
   use { 'https://gitlab.com/HiPhish/jinja.vim', as = 'jinja.vim', }
 
   -- treesitter
-  use { 'nvim-treesitter/nvim-treesitter', event="BufEnter",
+  use { 'nvim-treesitter/nvim-treesitter',
     config = function() require "mm.plugins.treesitter" end }
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = "nvim-treesitter" }
   use { 'nvim-treesitter/playground', after = "nvim-treesitter" }
@@ -69,9 +69,8 @@ require('packer').startup(function()
   use { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end, after = "telescope.nvim" }
 
   -- git
-  use { 'tpope/vim-fugitive', cmd = "Git", keys = {"<leader>ee", "<leader>ep"}, config = function() require("mm.plugins.fugitive") end }
-  use { 'lewis6991/gitsigns.nvim', ft = { "lua", "python", "vim" }, event = "CursorHold",
-    config = function() require("mm.plugins.gitsigns") end }
+  use { 'tpope/vim-fugitive', config = function() require("mm.plugins.fugitive") end }
+  use { 'lewis6991/gitsigns.nvim', config = function() require("mm.plugins.gitsigns") end }
 
   -- lsp and completions and linters
   use { 'tpope/vim-dadbod', config = function() vim.g.dbext_default_ORA_bin = "sql" end }
@@ -91,16 +90,14 @@ require('packer').startup(function()
   use { 'hrsh7th/cmp-path', after = "nvim-cmp" }
   use { 'hrsh7th/cmp-nvim-lua', after = "nvim-cmp" }
 
-  use { 'mfussenegger/nvim-lint', event = "BufWinEnter", config = function() require("mm.plugins.nvim_lint") end }
-
   use { 'nanotee/sqls.nvim' }
   --
   -- wiki and md
-  use { 'vimwiki/vimwiki', ft = "markdown", event = "CursorHold", after = "vim-pandoc",
+  use { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
     setup = function() require("mm.plugins.vimwiki") end }
   use { 'tools-life/taskwiki', after = "vimwiki" }
-  use { 'vim-pandoc/vim-pandoc', ft = "markdown" }
-  use { 'vim-pandoc/vim-pandoc-syntax', ft = "markdown", after = "vim-pandoc" }
+  use { 'vim-pandoc/vim-pandoc' }
+  use { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" }
   use { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" }
 
   -- dap
@@ -111,9 +108,6 @@ require('packer').startup(function()
 
   -- python dev
   use { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end }
-  use { 'untitled-ai/jupyter_ascending.vim', ft = "python" }
-  use { 'goerz/jupytext.vim', ft = "python" }
-  use { 'bfredl/nvim-ipy', ft = "python", config = function() require("mm.plugins.nvim_ipy") end }
   use {'quarto-dev/quarto-nvim' , requires='jmbuhr/otter.nvim'}
 
   if is_bootstrap then

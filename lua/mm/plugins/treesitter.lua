@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {"help", "markdown", "lua", "norg", "vim", "python", "javascript", "bash", "dockerfile", "http", "r", "query", "go"},
   highlight = {
     enable = true,              -- false will disable the whole extension
-    -- disable = { "c", "rust" },  -- list of language that will be disabled
+    disable = {"vimwiki"},  -- list of language that will be disabled
   },
   playground = {
     enable = true,

@@ -7,3 +7,5 @@ local map = vim.keymap.set
 map("n", "<leader>wt", ":VimwikiToggleListItem<CR>")
 map("n", "<leader>wf", ":VimwikiFollowLink<CR>")
 
+local pandoc_syntax = vim.api.nvim_create_augroup("pandoc", {clear = true})
+vim.api.nvim_create_autocmd({"FileType"}, {pattern="vimwiki", group = pandoc_syntax, callback = function() vim.cmd.TSToggle("highlight"); vim.o.syntax = "vimwiki" end})

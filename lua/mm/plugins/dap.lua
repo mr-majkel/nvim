@@ -1,4 +1,5 @@
- require('dap-python').setup('/usr/bin/python')
+ require('dap-python').setup("python")
+ require('dap-python').test_runner = "pytest"
 
  -- table.insert(require('dap').configurations.python, {
  --   name = 'docker attach',
