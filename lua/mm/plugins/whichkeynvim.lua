@@ -96,6 +96,5 @@ local leader_maps = {
 
 }
 leader_maps["/"] = "to win sep"
-leader_maps[" "] = {name = "jupyter"}
 
 wk.register(leader_maps, {prefix = "<leader>"})
