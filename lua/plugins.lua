@@ -93,12 +93,18 @@ require('packer').startup(function()
   use { 'nanotee/sqls.nvim' }
   --
   -- wiki and md
-  use { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
-    setup = function() require("mm.plugins.vimwiki") end }
-  use { 'tools-life/taskwiki', after = "vimwiki" }
-  use { 'vim-pandoc/vim-pandoc' }
-  use { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" }
+  -- use { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
+  --   setup = function() require("mm.plugins.vimwiki") end }
+  -- use { 'tools-life/taskwiki', after = "vimwiki" }
+  -- use { 'vim-pandoc/vim-pandoc' }
+  -- use { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" }
   use { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" }
+  use({'jakewvincent/mkdnflow.nvim',
+      -- rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+          config = function()
+                    require('mm.plugins.mkdnflow')
+                        end
+                      })
 
   -- dap
   use { 'mfussenegger/nvim-dap', event = "BufRead" }
