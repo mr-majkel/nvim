@@ -2,7 +2,7 @@ require('mkdnflow').setup({
     modules = {
         bib = true,
         buffers = true,
-        conceal = true,
+        conceal = false,
         cursor = true,
         folds = true,
         links = true,
@@ -30,7 +30,7 @@ require('mkdnflow').setup({
     links = {
         style = 'wiki',
         name_is_source = false,
-        conceal = true,
+        conceal = false,
         context = 1,
         implicit_extension = nil,
         transform_implicit = function(input)
