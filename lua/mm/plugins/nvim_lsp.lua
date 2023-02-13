@@ -84,7 +84,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require'lspconfig'.sumneko_lua.setup {
+require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
@@ -108,3 +108,39 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+local zk_on_attach = function(client, bufnr)
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+  local opts = { noremap=true, silent=false }
+  -- Open the link under the caret.
+  buf_set_keymap("n", "<CR>", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  -- Create a new note after asking for its title.
+  -- This overrides the global `<leader>zn` mapping to create the note in the same directory as the current buffer.
+  buf_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<CR>", opts)
+  -- Create a new note in the same directory as the current buffer, using the current selection for title.
+  buf_set_keymap("v", "<leader>znt", ":'<,'>ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>", opts)
+  -- Create a new note in the same directory as the current buffer, using the current selection for note content and asking for its title.
+  buf_set_keymap("v", "<leader>znc", ":'<,'>ZkNewFromContentSelection { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<CR>", opts)
+  buf_set_keymap("n", "<leader>zj", "<Cmd>ZkNew { dir = 'journal/daily', title = vim.fn.input('Title: ')}<CR>", opts)
+
+  -- Open notes linking to the current buffer.
+  buf_set_keymap("n", "<leader>zb", "<Cmd>ZkBacklinks<CR>", opts)
+  -- Alternative for backlinks using pure LSP and showing the source context.
+  --map('n', '<leader>zb', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
+  -- Open notes linked by the current buffer.
+  buf_set_keymap("n", "<leader>zl", "<Cmd>ZkLinks<CR>", opts)
+  -- Open the code actions for a visual selection.
+  buf_set_keymap("v", "<leader>za", ":'<,'>lua vim.lsp.buf.range_code_action()<CR>", opts)
+end
+
+nvim_lsp["zk"].setup({capabilities = capabilities, on_attach = zk_on_attach, handlers = handlers})

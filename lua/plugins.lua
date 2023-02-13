@@ -99,12 +99,13 @@ require('packer').startup(function()
   -- use { 'vim-pandoc/vim-pandoc' }
   -- use { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" }
   use { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" }
-  use({'jakewvincent/mkdnflow.nvim',
-      -- rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
-          config = function()
-                    require('mm.plugins.mkdnflow')
-                        end
-                      })
+  -- use({'jakewvincent/mkdnflow.nvim',
+  --     -- rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+  --         config = function()
+  --                   require('mm.plugins.mkdnflow')
+  --                       end
+  --                     })
+  use({"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end})
 
   -- dap
   use { 'mfussenegger/nvim-dap', event = "BufRead" }
