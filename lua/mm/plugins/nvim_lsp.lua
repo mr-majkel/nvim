@@ -131,7 +131,8 @@ local zk_on_attach = function(client, bufnr)
   buf_set_keymap("v", "<leader>znt", ":'<,'>ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>", opts)
   -- Create a new note in the same directory as the current buffer, using the current selection for note content and asking for its title.
   buf_set_keymap("v", "<leader>znc", ":'<,'>ZkNewFromContentSelection { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<CR>", opts)
-  buf_set_keymap("n", "<leader>zj", "<Cmd>ZkNew { dir = 'journal/daily', title = vim.fn.input('Title: ')}<CR>", opts)
+  buf_set_keymap("n", "<leader>zj", "<Cmd>ZkNewJournal<CR>", opts)
+  buf_set_keymap("n", "<leader>zij", "<Cmd>ZkNewJournal {inline=true}<CR>", opts)
 
   -- Open notes linking to the current buffer.
   buf_set_keymap("n", "<leader>zb", "<Cmd>ZkBacklinks<CR>", opts)

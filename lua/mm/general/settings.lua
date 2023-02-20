@@ -15,6 +15,9 @@ o.smartindent = true
 o.hlsearch = true
 o.wrap = false
 
+o.undofile = true
+o.swapfile = false
+
 o.sidescrolloff=20
 local scrolloff = 16
 o.scrolloff=scrolloff

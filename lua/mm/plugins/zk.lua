@@ -19,3 +19,24 @@ require("zk").setup({
     },
   },
 })
+
+local zk = require("zk")
+local util = require("zk.util")
+local commands = require("zk.commands")
+
+commands.add("ZkNewJournal", function(options)
+  options = options or {}
+
+  if not options.dir then
+    options.dir = "journal/daily"
+  end
+
+  if options.inline == true then
+    options.inline = nil
+    options.dryRun = true
+    options.insertLinkAtLocation = util.get_lsp_location_from_caret()
+  end
+
+  zk.new(options)
+end)
+

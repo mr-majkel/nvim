@@ -1,136 +1,119 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Install packer
-local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-local is_bootstrap = false
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  is_bootstrap = true
-  vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
-  vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-local use = require("packer").use
-
-require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-
+require('lazy').setup({
   -- lua
-  use { 'folke/neodev.nvim', ft = 'lua', config = function() require('neodev').setup({}) end }
+   { 'folke/neodev.nvim', ft = 'lua', config = function() require('neodev').setup({}) end },
 
 
   -- colorscheme and looks
-  use 'Shatur/neovim-ayu'
-  use 'marko-cerovac/material.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'crispgm/nvim-tabline'
-  use 'hoob3rt/lualine.nvim'
-  use 'mhinz/vim-startify'
+   'Shatur/neovim-ayu',
+   'marko-cerovac/material.nvim',
+   'kyazdani42/nvim-web-devicons',
+   'crispgm/nvim-tabline',
+   'hoob3rt/lualine.nvim',
+   'mhinz/vim-startify',
 
   -- utility
-  use {'lewis6991/impatient.nvim', config=function() require"impatient" end}
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim'
-  use { 'tpope/vim-surround', event = "BufWinEnter" }
-  use { 'tpope/vim-commentary', event = "BufWinEnter" }
-  use { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end }
-  use { 'ojroques/vim-oscyank', event = "BufWinEnter" }
-  use { 'jpalardy/vim-slime' }
-  use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
-  use { 'folke/zen-mode.nvim', cmd = "ZenMode", config = function() require "mm.plugins.focus" end }
-  use { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end }
-  use { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end }
-  use { 'stevearc/aerial.nvim', after="nvim-treesitter", config = function() require "mm.plugins.aerial" end }
-  use { 'folke/which-key.nvim', config = function() require "mm.plugins.whichkeynvim" end }
+   {'lewis6991/impatient.nvim', config=function() require"impatient" end},
+   'nvim-lua/plenary.nvim',
+   'nvim-lua/popup.nvim',
+   { 'tpope/vim-surround', event = "BufWinEnter" },
+   { 'tpope/vim-commentary', event = "BufWinEnter" },
+   { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end },
+   { 'ojroques/vim-oscyank', event = "BufWinEnter" },
+   { 'jpalardy/vim-slime' },
+   { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end },
+   { 'folke/zen-mode.nvim', cmd = "ZenMode", config = function() require "mm.plugins.focus" end },
+   { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end },
+   { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end },
+   { 'stevearc/aerial.nvim', config = function() require "mm.plugins.aerial" end },
+   { 'folke/which-key.nvim', config = function() require "mm.plugins.whichkeynvim" end },
+  "mbbill/undotree",
 
   -- rest api
-  use { 'NTBBloodbath/rest.nvim', ft = "http", config = function() require "mm.plugins.rest" end }
+   { 'NTBBloodbath/rest.nvim', ft = "http", config = function() require "mm.plugins.rest" end },
 
   -- remote
-  use { 'chipsenkbeil/distant.nvim', cmd = "Distant", config = function() require "mm.plugins.rest" end }
+   { 'chipsenkbeil/distant.nvim', cmd = "Distant", config = function() require "mm.plugins.rest" end },
 
   -- filetypes
-  use { 'mracos/mermaid.vim' }
-  use { 'https://gitlab.com/HiPhish/jinja.vim', as = 'jinja.vim', }
+   { 'mracos/mermaid.vim' },
+   { 'https://gitlab.com/HiPhish/jinja.vim', name = 'jinja.vim', },
 
   -- treesitter
-  use { 'nvim-treesitter/nvim-treesitter',
-    config = function() require "mm.plugins.treesitter" end }
-  use { 'nvim-treesitter/nvim-treesitter-textobjects', after = "nvim-treesitter" }
-  use { 'nvim-treesitter/playground', after = "nvim-treesitter" }
+   { 'nvim-treesitter/nvim-treesitter',
+    config = function() require "mm.plugins.treesitter" end },
+   { 'nvim-treesitter/nvim-treesitter-textobjects'},
+   { 'nvim-treesitter/playground'},
 
   -- file browser
-  use { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end }
-  use { 'tamago324/lir-git-status.nvim', config = function() require 'lir.git_status'.setup() end, after = "lir.nvim" }
+   { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end },
+   { 'tamago324/lir-git-status.nvim', config = function() require 'lir.git_status'.setup() end},
 
   -- file jumping
   -- change to CursorHold in 0.8
-  use { 'nvim-lua/telescope.nvim', event = "CursorHold", config = function() require("mm.plugins.telescope") end }
-  use { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end, after = "telescope.nvim" }
+   { 'nvim-lua/telescope.nvim', event = "CursorHold", config = function() require("mm.plugins.telescope") end },
+   { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end},
 
   -- git
-  use { 'tpope/vim-fugitive', config = function() require("mm.plugins.fugitive") end }
-  use { 'lewis6991/gitsigns.nvim', config = function() require("mm.plugins.gitsigns") end }
+   { 'tpope/vim-fugitive', config = function() require("mm.plugins.fugitive") end },
+   { 'lewis6991/gitsigns.nvim', config = function() require("mm.plugins.gitsigns") end },
 
   -- lsp and completions and linters
-  use { 'tpope/vim-dadbod', config = function() vim.g.dbext_default_ORA_bin = "sql" end }
-  use { "kristijanhusak/vim-dadbod-completion", after="nvim-cmp", }
-  use { 'kristijanhusak/vim-dadbod-ui', config = function() vim.g.db_ui_env_variable_url = "sirlatam" end}
-  use { 'neovim/nvim-lspconfig', config = function() require("mm.plugins.nvim_lsp") end,
-    requires = {
+   { 'tpope/vim-dadbod', config = function() vim.g.dbext_default_ORA_bin = "sql" end },
+   { "kristijanhusak/vim-dadbod-completion"},
+   { 'kristijanhusak/vim-dadbod-ui', config = function() vim.g.db_ui_env_variable_url = "sirlatam" end},
+   { 'neovim/nvim-lspconfig', config = function() require("mm.plugins.nvim_lsp") end,
+    dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
-    }
-  }
-  use { "ray-x/lsp_signature.nvim", config = function() require("lsp_signature").setup() end}
+    },
+  },
+   { "ray-x/lsp_signature.nvim", config = function() require("lsp_signature").setup() end},
 
 
 
-  use { 'hrsh7th/nvim-cmp', event = "InsertEnter", config = function() require("mm.plugins.cmp") end }
-  use { 'hrsh7th/cmp-buffer', after = "nvim-cmp" }
-  use { 'hrsh7th/cmp-path', after = "nvim-cmp" }
-  use { 'hrsh7th/cmp-nvim-lua', after = "nvim-cmp" }
+   { 'hrsh7th/nvim-cmp', event = "InsertEnter", config = function() require("mm.plugins.cmp") end },
+   { 'hrsh7th/cmp-buffer'},
+   { 'hrsh7th/cmp-path'},
+   { 'hrsh7th/cmp-nvim-lua'},
 
-  use { 'nanotee/sqls.nvim' }
+   { 'nanotee/sqls.nvim' },
   --
   -- wiki and md
-  -- use { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
-  --   setup = function() require("mm.plugins.vimwiki") end }
-  -- use { 'tools-life/taskwiki', after = "vimwiki" }
-  -- use { 'vim-pandoc/vim-pandoc' }
-  -- use { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" }
-  use { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" }
-  -- use({'jakewvincent/mkdnflow.nvim',
+  --  { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
+  --   setup = function() require("mm.plugins.vimwiki") end },
+  --  { 'tools-life/taskwiki', after = "vimwiki" },
+  --  { 'vim-pandoc/vim-pandoc' },
+  --  { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" },
+   { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" },
+  -- ({'jakewvincent/mkdnflow.nvim',
   --     -- rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
   --         config = function()
   --                   require('mm.plugins.mkdnflow')
   --                       end
   --                     })
-  use({"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end})
+  {dir="$XDG_CONFIG_HOME/nvim/dev/zk-nvim/", config = function() require("mm.plugins.zk") end},
 
   -- dap
-  use { 'mfussenegger/nvim-dap', event = "BufRead" }
-  use { 'mfussenegger/nvim-dap-python', ft = "python", after = "nvim-dap", config = function() require("mm.plugins.dap") end }
-  use { "rcarriga/nvim-dap-ui", after="nvim-dap", config = function() require("mm.plugins.dapui") end, requires = {"mfussenegger/nvim-dap"} }
-  use { "rcarriga/cmp-dap", after="nvim-cmp", requires = {"mfussenegger/nvim-dap"} }
+   { 'mfussenegger/nvim-dap', event = "BufRead" },
+   { 'mfussenegger/nvim-dap-python', ft = "python", config = function() require("mm.plugins.dap") end },
+   { "rcarriga/nvim-dap-ui", config = function() require("mm.plugins.dapui") end, dependencies = {"mfussenegger/nvim-dap"} },
+   { "rcarriga/cmp-dap", dependencies = {"mfussenegger/nvim-dap"} },
 
   -- python dev
-  use { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end }
-  use {'quarto-dev/quarto-nvim' , requires='jmbuhr/otter.nvim'}
-
-  if is_bootstrap then
-    require('packer').sync()
-  end
-end)
-
--- When we are bootstrapping a configuration, it doesn't
--- make sense to execute the rest of the init.lua.
---
--- You'll need to restart nvim, and then it will work.
-if is_bootstrap then
-  print '=================================='
-  print '    Plugins are being installed'
-  print '    Wait until Packer completes,'
-  print '       then restart nvim'
-  print '=================================='
-  return
-end
+   { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end },
+   {'quarto-dev/quarto-nvim' , dependencies='jmbuhr/otter.nvim'},
+})
