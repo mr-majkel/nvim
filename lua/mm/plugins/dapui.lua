@@ -64,7 +64,6 @@ dapui.setup({
     {
       elements = {
       -- Elements can be strings or table with id and size keys.
-        "watches",
         "console",
       },
       size = 15, -- 40 columns
