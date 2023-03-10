@@ -105,7 +105,7 @@ require('lazy').setup({
   --                   require('mm.plugins.mkdnflow')
   --                       end
   --                     })
-  {dir="$XDG_CONFIG_HOME/nvim/dev/zk-nvim/", config = function() require("mm.plugins.zk") end},
+  {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
 
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },
