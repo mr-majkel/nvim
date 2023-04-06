@@ -144,4 +144,4 @@ local zk_on_attach = function(client, bufnr)
   buf_set_keymap("v", "<leader>za", ":'<,'>lua vim.lsp.buf.range_code_action()<CR>", opts)
 end
 
-nvim_lsp["zk"].setup({capabilities = capabilities, on_attach = zk_on_attach, handlers = handlers})
+-- nvim_lsp["zk"].setup({capabilities = capabilities, on_attach = zk_on_attach, handlers = handlers})

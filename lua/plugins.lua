@@ -65,7 +65,7 @@ require('lazy').setup({
 
   -- file jumping
   -- change to CursorHold in 0.8
-   { 'nvim-lua/telescope.nvim', event = "CursorHold", config = function() require("mm.plugins.telescope") end },
+   { 'nvim-telescope/telescope.nvim', event = "CursorHold", config = function() require("mm.plugins.telescope") end },
    { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end},
 
   -- git
@@ -105,7 +105,10 @@ require('lazy').setup({
   --                   require('mm.plugins.mkdnflow')
   --                       end
   --                     })
-  {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
+  -- {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
+  {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'},
+  config= function() require("telekasten").setup({home = vim.fn.expand("~/zettelkasten") }) end },
+  { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
 
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },
