@@ -1,20 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  -- lua
+return { -- lua
    { 'folke/neodev.nvim', ft = 'lua', config = function() require('neodev').setup({}) end },
 
 
@@ -106,8 +93,7 @@ require('lazy').setup({
   --                       end
   --                     })
   -- {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
-  {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'},
-  config= function() require("telekasten").setup({home = vim.fn.expand("~/zettelkasten") }) end },
+  -- {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'}},
   { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
 
   -- dap
@@ -119,4 +105,4 @@ require('lazy').setup({
   -- python dev
    { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end },
    {'quarto-dev/quarto-nvim' , dependencies='jmbuhr/otter.nvim'},
-})
+}
