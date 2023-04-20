@@ -72,7 +72,7 @@ return { -- lua
 
 
 
-   { 'hrsh7th/nvim-cmp', event = "InsertEnter", config = function() require("mm.plugins.cmp") end },
+   { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end },
    { 'hrsh7th/cmp-buffer'},
    { 'hrsh7th/cmp-path'},
    { 'hrsh7th/cmp-nvim-lua'},
@@ -95,6 +95,7 @@ return { -- lua
   -- {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
   -- {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'}},
   { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
+  { 'ekickx/clipboard-image.nvim'},
 
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },
@@ -104,5 +105,8 @@ return { -- lua
 
   -- python dev
    { 'danymat/neogen', event = "CursorHold", config = function() require("mm.plugins.neogen") end },
-   {'quarto-dev/quarto-nvim' , dependencies='jmbuhr/otter.nvim'},
+   {'quarto-dev/quarto-nvim' , dependencies= {
+        'jmbuhr/otter.nvim',
+        },
+      }
 }

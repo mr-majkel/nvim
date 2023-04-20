@@ -20,7 +20,7 @@ cmp.setup {
     },
     { name = 'nvim_lua' },
     { name = "vim_dadbod_completion" },
-    { name = "quarto" },
+    { name = "otter" },
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
