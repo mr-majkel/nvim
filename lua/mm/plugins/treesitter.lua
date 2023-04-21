@@ -7,7 +7,7 @@ parser_configs.http = {
   },
 }
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"help", "markdown", "markdown_inline","lua", "norg", "vim", "python", "javascript", "bash", "dockerfile", "http", "r", "query", "go"},
+  ensure_installed = {"markdown", "markdown_inline","lua", "norg", "vim", "python", "javascript", "bash", "dockerfile", "http", "r", "query", "go"},
   highlight = {
     enable = true,              -- false will disable the whole extension
     disable = {"vimwiki"},  -- list of language that will be disabled
