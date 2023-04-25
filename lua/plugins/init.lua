@@ -95,7 +95,8 @@ return { -- lua
   -- {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
   -- {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'}},
   { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
-  { 'ekickx/clipboard-image.nvim'},
+  { 'ekickx/clipboard-image.nvim'}, 
+  { 'edluffy/hologram.nvim'},
 
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },
