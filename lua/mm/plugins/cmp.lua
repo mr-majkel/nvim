@@ -66,11 +66,11 @@ cmp.setup {
 },
   window = {
     completion = {
-      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      -- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
       border = "rounded",
     },
     documentation = {
-      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      -- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
       border = "rounded",
     }
   },
