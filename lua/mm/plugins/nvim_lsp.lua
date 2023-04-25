@@ -12,6 +12,11 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local nvim_lsp = require('lspconfig')
 
 local handlers = {
+  ["textDocument/signatureHelp"] = vim.lsp.with(
+    vim.lsp.handlers.signature_help, {
+      -- Use a sharp border with `FloatBorder` highlights
+      border = "single"
+    }),
   ["textDocument/hover"] = vim.lsp.with(
     vim.lsp.handlers.hover, {
       -- Use a sharp border with `FloatBorder` highlights

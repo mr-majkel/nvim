@@ -72,7 +72,7 @@ return { -- lua
 
 
 
-   { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end },
+   { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end , dependencies= {'onsails/lspkind-nvim'}},
    { 'hrsh7th/cmp-buffer'},
    { 'hrsh7th/cmp-path'},
    { 'hrsh7th/cmp-nvim-lua'},

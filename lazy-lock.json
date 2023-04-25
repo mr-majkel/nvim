@@ -17,6 +17,7 @@
   "lir-git-status.nvim": { "branch": "main", "commit": "6e15a3ade508522ecc027f059a814ca75a364db7" },
   "lir.nvim": { "branch": "master", "commit": "1aa871f20637eccc4e1e26b0fbcf9aafc9b6caf7" },
   "lsp_signature.nvim": { "branch": "master", "commit": "775c0cdf5be5adcc08f27c9058edb00b5b517520" },
+  "lspkind-nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
   "lualine.nvim": { "branch": "master", "commit": "84ffb80e452d95e2c46fa29a98ea11a240f7843e" },
   "material.nvim": { "branch": "main", "commit": "18d5e8af4c4bc77382bda5e5ae2830ab515cf5c6" },
   "mermaid.vim": { "branch": "main", "commit": "a8470711907d47624d6860a2bcbd0498a639deb6" },

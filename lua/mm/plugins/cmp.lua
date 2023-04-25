@@ -7,6 +7,8 @@ local get_bufnrs = function()
 end
 
 local cmp = require 'cmp'
+local lspkind = require 'lspkind'
+
 cmp.setup {
   sources = {
     { name = 'nvim_lsp',
@@ -48,7 +50,30 @@ cmp.setup {
   enabled = function()
     return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
         or require("cmp_dap").is_dap_buffer()
-  end
+  end,
+  formatting = {
+  format = lspkind.cmp_format({
+    mode = "symbol_text",
+    menu = ({
+      buffer = "[Buffer]",
+      nvim_lsp = "[LSP]",
+      luasnip = "[LuaSnip]",
+      nvim_lua = "[Lua]",
+      latex_symbols = "[Latex]",
+      otter = "[Otter]",
+    })
+  }),
+},
+  window = {
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      border = "rounded",
+    },
+    documentation = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      border = "rounded",
+    }
+  },
 }
 
 require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
