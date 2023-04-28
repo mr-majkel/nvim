@@ -51,4 +51,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- require('nvim-treesitter.install').compilers = {"clang"}
-
+vim.api.nvim_set_hl(0, "TreesitterContextBottom",{underline = true, sp = "Grey"})

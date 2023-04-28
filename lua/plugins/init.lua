@@ -45,6 +45,7 @@ return { -- lua
     config = function() require "mm.plugins.treesitter" end },
    { 'nvim-treesitter/nvim-treesitter-textobjects'},
    { 'nvim-treesitter/playground'},
+   { 'nvim-treesitter/nvim-treesitter-context'},
 
   -- file browser
    { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end },
