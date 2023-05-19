@@ -22,7 +22,13 @@ return { -- lua
    { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end },
    { 'ojroques/vim-oscyank', event = "BufWinEnter" },
    { 'jpalardy/vim-slime' },
-   { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end },
+   { 'glacambre/firenvim', 
+            cond = not not vim.g.started_by_firenvim,
+            build = function()
+                require("lazy").load({ plugins = "firenvim", wait = true })
+                vim.fn["firenvim#install"](0)
+            end
+},
    { 'folke/zen-mode.nvim', cmd = "ZenMode", config = function() require "mm.plugins.focus" end },
    { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end },
    { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end },
