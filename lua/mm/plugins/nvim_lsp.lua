@@ -65,7 +65,7 @@ nvim_lsp["marksman"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   handlers = handlers,
-  filetypes = { "markdown", "quarto" }
+  filetypes = { "markdown", "quarto", "telekasten" }
 })
 
 nvim_lsp["r_language_server"].setup {
