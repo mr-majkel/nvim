@@ -6,8 +6,8 @@ return {
 
   -- Main paths
   home = vim.fn.expand("~/zettelkasten"),        -- path to main notes folder
-  daily = vim.fn.expand("~/zettelkasten/daily"),
-  weekly = vim.fn.expand("~/zettelkasten/weekly"),      -- path to weekly notes
+  dailies = vim.fn.expand("~/zettelkasten/daily"),
+  weeklies = vim.fn.expand("~/zettelkasten/weekly"),      -- path to weekly notes
   templates = vim.fn.expand("~/zettelkasten/templates"),   -- path to templates
 
   -- Specific note templates
