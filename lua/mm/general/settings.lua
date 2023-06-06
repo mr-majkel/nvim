@@ -14,6 +14,7 @@ o.autoindent = true
 o.smartindent = true
 o.hlsearch = true
 o.wrap = false
+opt.clipboard = {"unnamedplus"}
 
 o.undofile = true
 o.swapfile = false
