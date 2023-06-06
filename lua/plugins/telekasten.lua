@@ -1,7 +1,4 @@
-return {
-  'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'},
-  config = function()
-    require("telekasten").setup({
+local config = {
   -- debug=true,
 
   -- Main paths
@@ -99,7 +96,15 @@ return {
     }
   },
 
-})
+}
+return {
+  'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'},
+  config = function()
+    require("telekasten").setup(config)
+    local tk = require("telekasten")
+    vim.keymap.set("n", "<leader>zt", tk.show_tags, {desc="Telekasten show tags"})
+    vim.keymap.set("n", "<leader>zj", tk.find_daily_notes, {desc="Telekasten show dailies"})
+    vim.keymap.set("n", "<leader>zT", tk.goto_today, {desc="Telekasten go to today"})
 end
 }
 
