@@ -40,7 +40,7 @@ o.updatetime = 500
 
 o.list = true
 
-opt.diffopt={"internal", "filler", "closeoff", "algorithm:histogram"}
+opt.diffopt={"internal", "filler", "closeoff", "algorithm:histogram", "linematch:60"}
 
 local yank_group = vim.api.nvim_create_augroup("YankGroup", {clear = true})
 vim.api.nvim_create_autocmd({"TextYankPost"},
