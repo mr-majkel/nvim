@@ -31,6 +31,7 @@ o.colorcolumn = "80" -- color column no.80
 o.hidden = true
 o.foldlevelstart=99 --do not fold close by default
 o.laststatus=3 --global statusline
+o.showcmdloc="statusline"
 
 
 o.termguicolors = true

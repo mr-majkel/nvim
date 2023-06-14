@@ -45,7 +45,7 @@ require('lualine').setup{
           sections = {
             lualine_a = { {'mode', upper = true} },
             lualine_b = { {'filename', file_status = true}, 'filetype' },
-            lualine_c = { 'location', macro_recording, '%S' },
+            lualine_c = { 'location', macro_recording, 'searchcount', 'selectioncount'},
             lualine_x = { 'encoding', 'fileformat'},
             lualine_y = { {'branch', icon = ''}, 'diff' },
             lualine_z = { lsp_status, {'diagnostics', sources = {'nvim_diagnostic'}} },
