@@ -54,8 +54,8 @@ return { -- lua
    { 'nvim-treesitter/nvim-treesitter-context'},
 
   -- file browser
-   { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end },
-   { 'tamago324/lir-git-status.nvim', config = function() require 'lir.git_status'.setup() end},
+   -- { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end },
+   -- { 'tamago324/lir-git-status.nvim', config = function() require 'lir.git_status'.setup() end},
 
   -- file jumping
   -- change to CursorHold in 0.8
