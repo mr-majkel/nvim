@@ -88,7 +88,11 @@ return { -- lua
   --
   -- wiki and md
    { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" },
-  { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
+   { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() 
+     require("peek").setup({filetype = {'markdown', 'telekasten'}})
+     vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+     vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+   end},
   { 'ekickx/clipboard-image.nvim', config=function()
     require'clipboard-image'.setup {
     default = {

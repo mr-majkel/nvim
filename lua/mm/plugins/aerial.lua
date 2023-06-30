@@ -123,7 +123,7 @@ require("aerial").setup({
       -- function     - A function that returns true if the buffer should be
       --                ignored or false if it should not be ignored.
       --                Takes two arguments, `bufnr` and `buftype`.
-      buftypes = "special",
+      buftypes = nil,
   
       -- Ignored wintypes.
       -- Can be one of the following:
