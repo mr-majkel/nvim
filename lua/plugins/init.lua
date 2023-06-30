@@ -87,20 +87,7 @@ return { -- lua
    { 'nanotee/sqls.nvim' },
   --
   -- wiki and md
-  --  { 'vimwiki/vimwiki', branch="dev", after = "vim-pandoc",
-  --   setup = function() require("mm.plugins.vimwiki") end },
-  --  { 'tools-life/taskwiki', after = "vimwiki" },
-  --  { 'vim-pandoc/vim-pandoc' },
-  --  { 'vim-pandoc/vim-pandoc-syntax', after = "vim-pandoc" },
    { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" },
-  -- ({'jakewvincent/mkdnflow.nvim',
-  --     -- rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
-  --         config = function()
-  --                   require('mm.plugins.mkdnflow')
-  --                       end
-  --                     })
-  -- {"mickael-menu/zk-nvim", config = function() require("mm.plugins.zk") end},
-  -- {'renerocksai/telekasten.nvim', dependencies = {'nvim-telescope/telescope.nvim'}},
   { 'toppair/peek.nvim', run = 'deno task --quiet build:fast', config=function() require("peek").setup({filetype = {'markdown', 'telekasten'}}) end},
   { 'ekickx/clipboard-image.nvim', config=function()
     require'clipboard-image'.setup {
