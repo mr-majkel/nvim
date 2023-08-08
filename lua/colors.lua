@@ -24,7 +24,7 @@ require('material').setup({
         -- "dashboard",
         "gitsigns",
         -- "hop",
-        -- "indent-blankline",
+        "indent-blankline",
         -- "lspsaga",
         -- "mini",
         -- "neogit",
