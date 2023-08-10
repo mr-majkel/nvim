@@ -18,10 +18,10 @@ function! SlimeTermV() abort
   execute 'normal!' . "\<c-w>p"
 endfunction
 
-nmap <Leader>st :call SlimeTermV()<CR>
-nmap <Leader>ss <Plug>SlimeLineSend
+nmap <silent> <Leader>st :call SlimeTermV()<CR>
+nmap <silent> <Leader>ss <Plug>SlimeLineSend
 " defined for python use in Windows
-nmap <Leader>sf <Plug>SlimeLineSend <bar>:call slime#send("\r")<cr>
-nmap <Leader>sa <Plug>SlimeParagraphSend
-xmap <Leader>ss <Plug>SlimeRegionSend
+nmap <silent> <Leader>sf <Plug>SlimeLineSend <bar>:call slime#send("\r")<cr>
+nmap <silent> <Leader>sa <Plug>SlimeParagraphSend
+xmap <silent> <Leader>ss <Plug>SlimeRegionSend
 
