@@ -11,19 +11,6 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local nvim_lsp = require('lspconfig')
 
-local handlers = {
-  ["textDocument/signatureHelp"] = vim.lsp.with(
-    vim.lsp.handlers.signature_help, {
-      -- Use a sharp border with `FloatBorder` highlights
-      border = "single"
-    }),
-  ["textDocument/hover"] = vim.lsp.with(
-    vim.lsp.handlers.hover, {
-      -- Use a sharp border with `FloatBorder` highlights
-      border = "single"
-    })
-}
-
 local on_attach = function(client, bufnr)
   local filetype = vim.b.filetype
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -58,20 +45,18 @@ end
 local servers = { "pyright", "vimls", "tsserver", "jsonls", "marksman" }
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { capabilities = capabilities, on_attach = on_attach, handlers = handlers }
+  nvim_lsp[lsp].setup { capabilities = capabilities, on_attach = on_attach}
 end
 
 nvim_lsp["marksman"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  handlers = handlers,
   filetypes = { "markdown", "quarto", "telekasten" }
 })
 
 nvim_lsp["r_language_server"].setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  handlers = handlers,
   settings = {
     rich_documentation = false,
   }
@@ -83,7 +68,7 @@ nvim_lsp["r_language_server"].setup {
 --     end
 -- }
 
-nvim_lsp["gopls"].setup({ capabilities = capabilities, on_attach = on_attach, handlers = handlers })
+nvim_lsp["gopls"].setup({ capabilities = capabilities, on_attach = on_attach})
 
 -- vim.cmd([[
 -- augroup completion_lua
@@ -100,7 +85,6 @@ table.insert(runtime_path, "lua/?/init.lua")
 require 'lspconfig'.lua_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  handlers = handlers,
   settings = {
     Lua = {
       runtime = {
