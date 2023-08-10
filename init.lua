@@ -18,7 +18,7 @@ require("lazy").setup('plugins')
 require 'mm.general.my_keys'
 require 'colors'
 
-vim.cmd.colorscheme("material")
+vim.cmd.colorscheme("catppuccin")
 
 P = function(table)
   print(vim.inspect(table))

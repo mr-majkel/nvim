@@ -24,6 +24,7 @@ return {
         },
       },
   lsp = {
+    signature = {opts={size = {height=5}}},
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
