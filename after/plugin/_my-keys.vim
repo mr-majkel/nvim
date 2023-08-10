@@ -8,7 +8,7 @@
 " inoremap <C-f> <c-x><c-f>
 
 " change windows backslashes
-nnoremap <leader>/ V:s/\\/\//g<cr>
+nnoremap <silent> <leader>/ V:s/\\/\//g<cr>
 vnoremap <leader>/ :s/\\/\//g<cr>
 " Map keys to exit terminal mode
 tnoremap <C-n><C-n> <C-\><C-n>
@@ -42,17 +42,17 @@ endfunction
 " nnoremap <Leader>nn :call NetrwToggle()<CR>
 
 " Switch buffers
-nnoremap <leader>gj :bprevious<cr>
-nnoremap <leader>gk :bnext<cr>
-nnoremap <leader>gq :bdelete<cr>
+nnoremap <silent> <leader>gj :bprevious<cr>
+nnoremap <silent> <leader>gk :bnext<cr>
+nnoremap <silent> <leader>gq :bdelete<cr>
 " close all other buffers
-nnoremap <leader>gQ :%bd\|e#<cr>
+nnoremap <silent> <leader>gQ :%bd\|e#<cr>
 
 " Switch windows
-nnoremap <leader>h :wincmd h<cr>
-nnoremap <leader>j :wincmd j<cr>
-nnoremap <leader>k :wincmd k<cr>
-nnoremap <leader>l :wincmd l<cr>
+nnoremap <silent> <leader>h :wincmd h<cr>
+nnoremap <silent> <leader>j :wincmd j<cr>
+nnoremap <silent> <leader>k :wincmd k<cr>
+nnoremap <silent> <leader>l :wincmd l<cr>
 
 " List terminal job id
 nnoremap <silent> <leader>tt :call Termbinds()<CR>
@@ -68,25 +68,22 @@ function Termbinds() abort
 endfunction
 
 " mute Q
-nnoremap Q :q
+nnoremap <silent> Q :q
 
 " paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
+nnoremap <silent> <leader>p "+p
+nnoremap <silent> <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 " yank to clipboard
-nnoremap <leader>y "+y
+nnoremap <silent> <leader>y "+y
 vnoremap <leader>y "+y
 
 " enter command mode
-nnoremap z; :
+nnoremap <silent> z; :
 
 " quicker switch
-nnoremap <c-s> <c-^>
-
-" yank to end of line
-nnoremap Y y$
+nnoremap <silent> <c-s> <c-^>
 
 " python debugging
 tnoremap <C-n><C-p> python -m unittest discover tests -v
