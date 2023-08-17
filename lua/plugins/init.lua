@@ -64,7 +64,7 @@ return { -- lua
 
   -- git
    { 'tpope/vim-fugitive', config = function() require("mm.plugins.fugitive") end },
-   -- { 'lewis6991/gitsigns.nvim', config = function() require("mm.plugins.gitsigns") end },
+   { 'lewis6991/gitsigns.nvim', config = function() require("mm.plugins.gitsigns") end },
 
   -- lsp and completions and linters
    { 'tpope/vim-dadbod', config = function() vim.g.dbext_default_ORA_bin = "sql" end },
