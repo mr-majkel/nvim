@@ -1,3 +1,4 @@
+vim.loader.enable()
 require 'mm.general.disable_builtins'
 require 'mm.general.settings'
 

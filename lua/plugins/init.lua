@@ -14,7 +14,6 @@ return { -- lua
    'mhinz/vim-startify',
 
   -- utility
-   {'lewis6991/impatient.nvim', config=function() require"impatient" end},
    'nvim-lua/plenary.nvim',
    'nvim-lua/popup.nvim',
    { 'tpope/vim-surround', event = "BufWinEnter" },
