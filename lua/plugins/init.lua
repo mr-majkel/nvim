@@ -6,10 +6,9 @@ return { -- lua
 
 
   -- colorscheme and looks
-   'Shatur/neovim-ayu',
-   'marko-cerovac/material.nvim',
-   'kyazdani42/nvim-web-devicons',
-   'crispgm/nvim-tabline',
+   'nvim-tree/nvim-web-devicons',
+   {'crispgm/nvim-tabline',dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
+       config = true},
    'hoob3rt/lualine.nvim',
    'mhinz/vim-startify',
 
@@ -28,7 +27,6 @@ return { -- lua
                 vim.fn["firenvim#install"](0)
             end
 },
-   { 'folke/zen-mode.nvim', cmd = "ZenMode", config = function() require "mm.plugins.focus" end },
    { 'folke/trouble.nvim', cmd = "Trouble", config = function() require "mm.plugins.trouble" end },
    { 'folke/todo-comments.nvim', event = "BufWinEnter", config = function() require "mm.plugins.todo_comments" end },
    { 'stevearc/aerial.nvim', config = function() require "mm.plugins.aerial" end },
@@ -52,13 +50,8 @@ return { -- lua
    { 'nvim-treesitter/playground'},
    { 'nvim-treesitter/nvim-treesitter-context'},
 
-  -- file browser
-   -- { 'tamago324/lir.nvim', event = "CursorHold", config = function() require "mm.plugins.lir" end },
-   -- { 'tamago324/lir-git-status.nvim', config = function() require 'lir.git_status'.setup() end},
-
   -- file jumping
-  -- change to CursorHold in 0.8
-   { 'nvim-telescope/telescope.nvim', event = "CursorHold", config = function() require("mm.plugins.telescope") end },
+   { 'nvim-telescope/telescope.nvim', config = function() require("mm.plugins.telescope") end },
    { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end},
 
   -- git
@@ -74,9 +67,6 @@ return { -- lua
       { 'hrsh7th/cmp-nvim-lsp' },
     },
   },
-   -- { "ray-x/lsp_signature.nvim", config = function() require("lsp_signature").setup() end},
-
-
 
    { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end , dependencies= {'onsails/lspkind-nvim'}},
    { 'hrsh7th/cmp-buffer'},
@@ -87,18 +77,6 @@ return { -- lua
   --
   -- wiki and md
    { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" },
-   { 'toppair/peek.nvim', build = 'deno task --quiet build:fast', config=function() 
-     require("peek").setup({filetype = {'markdown', 'telekasten'}})
-     vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
-     vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
-   end},
-  { 'ekickx/clipboard-image.nvim', config=function()
-    require'clipboard-image'.setup {
-    default = {
-      affix = "markdown" -- Multi lines affix
-    }}
-  end},
-  { 'edluffy/hologram.nvim'},
 
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },

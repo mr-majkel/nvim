@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
 require 'mm.general.my_keys'
-require 'colors'
 
 vim.cmd.colorscheme("catppuccin")
 
