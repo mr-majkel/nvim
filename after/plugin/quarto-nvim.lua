@@ -16,7 +16,9 @@ require'quarto'.setup{
   },
   keymap = {
     hover = 'K',
-    definition = 'gd'
+    definition = 'gd',
+    rename = '<leader>rn',
+    -- references = '<leader>gr',
   }
 }
 }

@@ -2,7 +2,7 @@ let g:slime_target = "neovim"
 " let g:slime_python_ipython = 1
 let g:slime_no_mappings = 1
 let g:slime_dont_ask_default = 1
-let g:slime_paste_file = '~/.slime_paste'
+" let g:slime_paste_file = '~/.slime_paste'
 
 function! SlimeTermV() abort
   vsplit
