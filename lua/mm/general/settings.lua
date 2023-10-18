@@ -50,11 +50,12 @@ vim.api.nvim_create_autocmd({"TextYankPost"},
   end})
 
 local terminal_group = vim.api.nvim_create_augroup("TerminalGroup", {clear = true})
-vim.api.nvim_create_autocmd({"TermEnter *"},
-  {group = terminal_group, callback = function()
+vim.api.nvim_create_autocmd({"TermEnter"}, {pattern = "*",
+  group = terminal_group,
+  callback = function()
     vim.opt_local.scrolloff=0
   end})
-vim.api.nvim_create_autocmd({"TermLeave *"},
-  {group = terminal_group, callback = function()
+vim.api.nvim_create_autocmd({"TermLeave"}, {pattern = "*",
+  group = terminal_group, callback = function()
     vim.opt_local.scrolloff=scrolloff
   end})
