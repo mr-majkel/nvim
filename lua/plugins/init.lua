@@ -11,13 +11,13 @@ return { -- lua
        config = true},
    'hoob3rt/lualine.nvim',
    'mhinz/vim-startify',
+   { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end },
 
   -- utility
    'nvim-lua/plenary.nvim',
    'nvim-lua/popup.nvim',
    { 'tpope/vim-surround', event = "BufWinEnter" },
    { 'tpope/vim-commentary', event = "BufWinEnter" },
-   { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end },
    { 'ojroques/vim-oscyank', event = "BufWinEnter" },
    { 'jpalardy/vim-slime' },
    { 'glacambre/firenvim', 
