@@ -41,7 +41,7 @@ return {
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
     })
-  vim.keymap.set("n", "<leader>c", function() require('notify').dismiss({ silent = true, pending = true }) end)
+  vim.keymap.set("n", "<c-c>", function() require('notify').dismiss({ silent = true, pending = true }) end, {desc="clear noice popups"})
   end
 }
 

@@ -19,7 +19,6 @@ return { -- lua
    { 'tpope/vim-surround', event = "BufWinEnter" },
    { 'tpope/vim-commentary', event = "BufWinEnter" },
    { 'ojroques/vim-oscyank', event = "BufWinEnter" },
-   { 'jpalardy/vim-slime' },
    { 'glacambre/firenvim', 
             cond = not not vim.g.started_by_firenvim,
             build = function()
