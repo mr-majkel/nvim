@@ -23,23 +23,24 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = "vim_dadbod_completion" },
     { name = "otter" },
+    { name= "copilot"},
   },
   mapping = cmp.mapping.preset.insert {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete({}),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<C-n>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       else
         fallback()
       end
     end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       else
@@ -54,14 +55,16 @@ cmp.setup {
   formatting = {
   format = lspkind.cmp_format({
     mode = "symbol_text",
-    menu = ({
+    menu = {
       buffer = "[Buffer]",
       nvim_lsp = "[LSP]",
       luasnip = "[LuaSnip]",
       nvim_lua = "[Lua]",
       latex_symbols = "[Latex]",
       otter = "[Otter]",
-    })
+      copilot = "[Copilot]",
+    },
+    symbol_map = {Copilot = ""},
   }),
 },
   window = {
@@ -81,3 +84,4 @@ require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
     { name = "dap" },
   },
 })
+

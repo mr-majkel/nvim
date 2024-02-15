@@ -12,6 +12,7 @@ return { -- lua
    'hoob3rt/lualine.nvim',
    'mhinz/vim-startify',
    { 'norcalli/nvim-colorizer.lua', event = "CursorHold", config = function() require 'colorizer'.setup() end },
+   { 'AndreM222/copilot-lualine' },
 
   -- utility
    'nvim-lua/plenary.nvim',
@@ -67,12 +68,17 @@ return { -- lua
     },
   },
 
-   { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end , dependencies= {'onsails/lspkind-nvim'}},
-   { 'hrsh7th/cmp-buffer'},
-   { 'hrsh7th/cmp-path'},
-   { 'hrsh7th/cmp-nvim-lua'},
-
-   { 'nanotee/sqls.nvim' },
+  { 'hrsh7th/nvim-cmp', config = function() require("mm.plugins.cmp") end , dependencies= {'onsails/lspkind-nvim'}},
+  { 'hrsh7th/cmp-buffer'},
+  { 'hrsh7th/cmp-path'},
+  { 'hrsh7th/cmp-nvim-lua'},
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
+  { 'nanotee/sqls.nvim' },
   --
   -- wiki and md
    { 'dhruvasagar/vim-table-mode', cmd = "Tableize", ft = "markdown" },
