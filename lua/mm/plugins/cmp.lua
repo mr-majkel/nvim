@@ -23,7 +23,7 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = "vim_dadbod_completion" },
     { name = "otter" },
-    { name= "copilot"},
+    { name= "copilot", priority=100},
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
