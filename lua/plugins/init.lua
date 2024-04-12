@@ -86,7 +86,7 @@ return { -- lua
   -- dap
    { 'mfussenegger/nvim-dap', event = "BufRead" },
    { 'mfussenegger/nvim-dap-python', ft = "python", config = function() require("mm.plugins.dap") end },
-   { "rcarriga/nvim-dap-ui", config = function() require("mm.plugins.dapui") end, dependencies = {"mfussenegger/nvim-dap"} },
+   { "rcarriga/nvim-dap-ui", config = function() require("mm.plugins.dapui") end, dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
    { "rcarriga/cmp-dap", dependencies = {"mfussenegger/nvim-dap"} },
 
   -- python dev
