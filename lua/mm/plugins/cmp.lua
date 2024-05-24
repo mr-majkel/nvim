@@ -24,6 +24,7 @@ cmp.setup {
     { name = "vim_dadbod_completion" },
     { name = "otter" },
     { name= "copilot", priority=100},
+    { name= "neopyter", priority=100},
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -63,8 +64,15 @@ cmp.setup {
       latex_symbols = "[Latex]",
       otter = "[Otter]",
       copilot = "[Copilot]",
+      neopyter = "[Neopyter]",
     },
-    symbol_map = {Copilot = ""},
+    symbol_map = {Copilot = "",
+    ["Magic"] = "🪄",
+    ["Path"] = "📁",
+    ["Dict key"] = "🔑",
+    ["Instance"]="󱃻",
+    ["Statement"]="󱇯",
+  },
   }),
 },
   window = {
@@ -85,3 +93,8 @@ require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
   },
 })
 
+vim.api.nvim_set_hl(0, "CmpItemKindMagic", { bg = "NONE", fg = "#D4D434" })
+vim.api.nvim_set_hl(0, "CmpItemKindPath", { link = "CmpItemKindFolder" })
+vim.api.nvim_set_hl(0, "CmpItemKindDictkey", { link = "CmpItemKindKeyword" })
+vim.api.nvim_set_hl(0, "CmpItemKindInstance", { link = "CmpItemKindVariable" })
+vim.api.nvim_set_hl(0, "CmpItemKindStatement", { link = "CmpItemKindVariable" })

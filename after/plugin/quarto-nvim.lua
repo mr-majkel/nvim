@@ -14,11 +14,11 @@ require'quarto'.setup{
       enabled = true,
     },
   },
-  keymap = {
-    hover = 'K',
-    definition = 'gd',
-    rename = '<leader>rn',
-    -- references = '<leader>gr',
-  }
+  -- keymap = {
+  --   hover = 'K',
+  --   definition = 'gd',
+  --   rename = '<leader>rn',
+  --   -- references = '<leader>gr',
+  -- }
 }
 }
