@@ -46,7 +46,7 @@ return {
       copilot_node_command = 'node', -- Node.js version must be > 18.x
       server_opts_overrides = {},
     })
-      vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#CC00CC"})
+      -- vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#CC00CC"})
   end
 }
 

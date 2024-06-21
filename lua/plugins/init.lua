@@ -72,12 +72,12 @@ return { -- lua
   { 'hrsh7th/cmp-buffer'},
   { 'hrsh7th/cmp-path'},
   { 'hrsh7th/cmp-nvim-lua'},
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function ()
-      require("copilot_cmp").setup()
-    end
-  },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   config = function ()
+  --     require("copilot_cmp").setup()
+  --   end
+  -- },
   { 'nanotee/sqls.nvim' },
   --
   -- wiki and md

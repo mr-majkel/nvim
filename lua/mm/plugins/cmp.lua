@@ -23,7 +23,7 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = "vim_dadbod_completion" },
     { name = "otter" },
-    { name= "copilot", priority=100},
+    -- { name= "copilot", priority=100},
     { name= "neopyter", priority=100},
   },
   mapping = cmp.mapping.preset.insert {
@@ -63,7 +63,7 @@ cmp.setup {
       nvim_lua = "[Lua]",
       latex_symbols = "[Latex]",
       otter = "[Otter]",
-      copilot = "[Copilot]",
+      -- copilot = "[Copilot]",
       neopyter = "[Neopyter]",
     },
     symbol_map = {Copilot = "",
