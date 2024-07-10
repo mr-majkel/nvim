@@ -33,9 +33,6 @@ return { -- lua
    { 'folke/which-key.nvim', config = function() require "mm.plugins.whichkeynvim" end },
   "mbbill/undotree",
 
-  -- rest api
-   { 'NTBBloodbath/rest.nvim', ft = "http", config = function() require "mm.plugins.rest" end },
-
   -- remote
    { 'chipsenkbeil/distant.nvim', cmd = "Distant", config = function() require "mm.plugins.rest" end },
 
