@@ -20,7 +20,6 @@
   "mermaid.vim": { "branch": "main", "commit": "a8470711907d47624d6860a2bcbd0498a639deb6" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "neogen": { "branch": "main", "commit": "6de0add4805165317ab7d3d36b5cef48b1b865f3" },
-  "neopyter": { "branch": "master", "commit": "a1095d7222a4e327937d26d39ecc0acd6244769a" },
   "noice.nvim": { "branch": "main", "commit": "04ff1defa257db569a687ec16051a27fbaeb0e2f" },
   "nui.nvim": { "branch": "main", "commit": "61574ce6e60c815b0a0c4b5655b8486ba58089a1" },
   "nvim-cmp": { "branch": "main", "commit": "a110e12d0b58eefcf5b771f533fc2cf3050680ac" },
@@ -42,7 +41,6 @@
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
   "quarto-nvim": { "branch": "main", "commit": "eed598983fa4040eed77191f69462c1348770b8a" },
-  "rest.nvim": { "branch": "main", "commit": "e7843c55f9df6a9db9f97dac180035c6ff895a90" },
   "sqls.nvim": { "branch": "main", "commit": "4b1274b5b44c48ce784aac23747192f5d9d26207" },
   "telekasten.nvim": { "branch": "main", "commit": "319276a7853ff996b7bb1ed4250d8047c84ad29d" },
   "telescope.nvim": { "branch": "master", "commit": "bfcc7d5c6f12209139f175e6123a7b7de6d9c18a" },
@@ -60,6 +58,5 @@
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-table-mode": { "branch": "master", "commit": "e4365bde024f73e205eefa2fb78e3029ddb92ea9" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
-  "websocket.nvim": { "branch": "main", "commit": "8a096d51c957557f939e296c4937f27d5dc596d5" },
   "which-key.nvim": { "branch": "main", "commit": "af4ded85542d40e190014c732fa051bdbf88be3d" }
 }
