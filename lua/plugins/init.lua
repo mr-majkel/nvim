@@ -48,7 +48,6 @@ return { -- lua
    { 'nvim-treesitter/nvim-treesitter-context'},
 
   -- file jumping
-   { 'nvim-telescope/telescope.nvim', config = function() require("mm.plugins.telescope") end },
    { 'ThePrimeagen/harpoon', config = function() require("mm.plugins.harpoon") end},
 
   -- git
