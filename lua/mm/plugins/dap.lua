@@ -21,4 +21,6 @@
  keymap("n", "<leader>dB", function() dap.toggle_breakpoint(vim.fn.input("Condition for breakpoint: ")) end, {silent = true, desc = "Toggle dap breakpoint condition"})
  keymap("n", "<leader>dr", dap.repl.toggle, {silent = true, desc = "Toggle dap repl"})
  keymap("n", "<leader>dm", dap_python.test_method, {silent = true, desc = "Run dap for current test method"})
+ keymap("n", "<leader>dM", function() dap_python.test_method({config={justMyCode=false}}) end, {silent = true, desc = "Run dap for current test method"})
  keymap("n", "<leader>dc", dap_python.test_class, {silent = true, desc = "Run dap for current test class"})
+ keymap("n", "<leader>dC", function() dap_python.test_class({config={justMyCode=false}}) end, {silent = true, desc = "Run dap for current test class"})
